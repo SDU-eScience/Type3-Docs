@@ -1,0 +1,18 @@
+<div class="comment-container nano has-scrollbar">
+  <div class="nano-content">
+    {% if display_toc %}
+    <div id="comments">
+      <h3>Contents</h3>
+      {% set toctree = toctree(maxdepth=3, collapse=True, includehidden=True) %}
+      {% if display_toc %}
+        {{ toc | replace("<li>", "<li class='current'>")
+               | replace("<ul>", "<ul class='current'>")}}
+      {% else %}
+        <ul style="display: none;"><li><a></a></li></ul>
+        {{ toctree }}
+      {% endif %}
+    </div>
+    {% endif %}
+    </div>
+  </div>
+</div>
