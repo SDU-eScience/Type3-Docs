@@ -1,0 +1,49 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" >
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="{{ pathto('index.html', 1) }}">
+    <!-- <img class="pr-1" src="{{ pathto('_static/logo.svg', 1) }}" width="48px" hight="48px" style="margin: -12px 10px 0px 0px"></img> -->
+    <span style="color:white; font-size:32px; font-weight:normal; margin-left: 50px; margin-right: 40px" >Type 3 Docs</span>
+  </a>
+
+  <!-- Collapse button -->
+  <div class="row right">
+    <a href="#" class="btn navbar-toggler black-text mr-1 justify-content-center" id="mobile-toggle">
+      <i class="fas fa-search"></i>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://escience.sdu.dk" onclick="this.target='_blank'">eScience Center
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ pathto('index.html', 1) }}">User Guide</a>
+          <span class="sr-only">(current)</span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://legal.cloud.sdu.dk" onclick="this.target='_blank'">Terms of Service
+        </a>
+      </li>
+    </ul>
+    <!-- Links -->
+    <!-- <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/SDU-eScience/Type3-Docs">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </li>
+    </ul> -->
+  </div> 
+</nav>
