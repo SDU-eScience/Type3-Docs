@@ -12,5 +12,6 @@ sphinxcontrib-serializinghtml==1.1.4
 sphinxcontrib-bibtex==1.0.0
 docutils==0.14
 m2r==0.2.1
+recommonmark==0.7.1
 pytest==5.4.3
 Pillow==7.2.0
