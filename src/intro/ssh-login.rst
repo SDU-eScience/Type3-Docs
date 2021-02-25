@@ -117,11 +117,13 @@ To generate a new SSH key open the relevant program.
 
 In both cases you get a window similar to the following.
 
-[IMAGE]
+.. image:: ../extra/figures/puttygen0.png
+   :width: 500px
 
-To create a new key you should leave the default parameters at SSH-2 RSA and a key length of 2048 bits. Click *Generate* to generate a new key. After they key has been generated the screen is updated with information on the new key.
+To create a new key you should leave the default parameters at RSA and a key length of 2048 bits. Click *Generate* to generate a new key. After they key has been generated the screen is updated with information on the new key.
 
-[IMAGE]
+.. image:: ../extra/figures/puttygen1.png
+   :width: 500px
 
 Add a key comment (such as *My PC*) and write a strong passphrase to protect the key. Finally, save the two parts of the key. For both parts of the key pair we suggest saving them in a folder you can easily find again, such as your *Documents* folder.
 
@@ -135,25 +137,44 @@ Connecting to the system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **MobaXterm**
+
 Start the main MobaXterm program. A window similar to this appears. Note that you can skip the first many steps after you have completed this the first time.
 
-[IMAGE]
+.. image:: ../extra/figures/mobaxterm0.png
+   :width: 600px
 
-In the top left corner, click *Session* and a new window appears. In the new windows choose SSH session and fill out a few details.
+In the top left corner, click *Session* and a new window appears. In the new window select SSH session and fill out a few details.
 
 * Remote Host: hpc-type3.sdu.dk
 * Username: Your assigned username
-* Use private key: Select the private key you generated earlier.
+* Use private key: Under "Advanced SSH settings" select the private key you generated earlier.
 
-[IMAGE]
+.. image:: ../extra/figures/mobaxterm1.png
+   :width: 600px
 
 Once you have filled in the informatino, you should be able to connect to the system.
 
-[IMAGE]
+.. image:: ../extra/figures/mobaxterm2.png
+   :width: 600px
 
-Next time, you can open a connection to the system by simply using the link to hpc-type3.sdu.dk on the first page of MobaXterm.
+Next time, you can open a connection to the system by simply using the link to *hpc-type3.sdu.dk* on the first page of MobaXterm.
+
 
 **PuTTY**
+
 Start the main PuTTY program. A window similar to this appears. Note that you can skip the first many steps after you have completed this the first time.
 
-[IMAGE]
+.. image:: ../extra/figures/putty0.png
+   :width: 400px
+
+To configure the connection, complete the following steps.
+
+* Select *Connection -> SSH -> Auth* in the menu on the left, and select *Browse...* to locate the private SSH key you generated earlier. 
+* Next, go to the submenu *Connection -> Data*, and set the username you have been assigned on our system in Auto-login username.
+* Return to the main *Session* submenu, and write the hostname hpc-type3.sdu.dk.
+* Save these settings as a *Saved session* to skip the previous steps at future logins, by writing e.g. Type3 in the Saved sessions box, and click Save.
+
+In the future, you can simply double click saved session to load all the settings. To login simply click Open. You will be asked for the passphrase for your SSH key before you are allowed to login.
+
+.. image:: ../extra/figures/putty1.png
+   :width: 600px
