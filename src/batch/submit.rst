@@ -83,7 +83,7 @@ You can submit a job script with the ``sbatch`` command like this:
 
 To add additional options, or to override options specified in the job script, add the new values to sbatch command when submitting the job script.
 
-In the example below, the ``--time`` option is passed to ``sbatch`` command when submitting the job. This will set the limit on the total run time of the job allocation to 4 hours.
+In the following example, the ``--time`` option is passed to ``sbatch`` command when submitting the job. This will set the limit on the total run time of the job allocation to 4 hours.
 
 .. code-block:: console
 
