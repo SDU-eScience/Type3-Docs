@@ -21,6 +21,7 @@ Type 3 - Large Memory HPC
    batch/submit
    batch/monitor
    batch/intelmpi
+   batch/cancel
 
 .. toctree::
    :maxdepth: 1
