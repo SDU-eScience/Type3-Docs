@@ -1,5 +1,9 @@
-Type 3 - Large Memory HPC 
-=========================
+DeIC National Type 3 System
+================================
+
+The DeIC National Type 3 system is a small system consisting of large memory nodes (4 TB RAM per node) configured as a traditional Slurm cluster. The system is hosted and maintained by the eScience Center at the University of Southern Denmark
+
+On this page you will find information about how to apply for resources and basic user documentation describing how to access and use the system.
 
 
 .. toctree::
@@ -9,8 +13,9 @@ Type 3 - Large Memory HPC
    :hidden:
 
    intro/request-account.rst
-   intro/ssh-login.rst
    intro/hardware.rst
+   intro/ssh-login.rst
+   intro/quota.rst
 
 .. toctree::
    :maxdepth: 1
@@ -20,6 +25,8 @@ Type 3 - Large Memory HPC
 
    batch/submit
    batch/monitor
+   batch/cancel
+   batch/intelmpi
 
 .. toctree::
    :maxdepth: 1
@@ -39,7 +46,3 @@ Type 3 - Large Memory HPC
    :hidden:
 
    help/troubleshooting
-
-
-   
-
