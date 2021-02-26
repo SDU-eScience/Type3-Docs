@@ -89,7 +89,7 @@ In the example below, the ``--time`` option is passed to ``sbatch`` command when
 
    [testuser@fe-ac-02 ~]$ sbatch --time 4:00:00 jobscript.sh
 
-For more information about ``sbatch`` and to see a full list of the available options, use the ``man`` pages.
+For more information about ``sbatch`` and to see a full list of the available options, consult the manual.
 
 .. code-block:: console
 
