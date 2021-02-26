@@ -39,7 +39,7 @@ This information could be valuable when troubleshooting. For additional informat
 
 Below is an example from the manual of a detailed job description as returned by ``scontrol``.
 
-.. code-block:: console
+.. code-block:: text
 
    JobId=71701 Name=hostname
              UserId=da(1000) GroupId=da(1000)

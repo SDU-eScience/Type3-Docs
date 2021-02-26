@@ -13,8 +13,9 @@ On this page you will find information about how to apply for resources and basi
    :hidden:
 
    intro/request-account.rst
-   intro/ssh-login.rst
    intro/hardware.rst
+   intro/ssh-login.rst
+   intro/quota.rst
 
 .. toctree::
    :maxdepth: 1
