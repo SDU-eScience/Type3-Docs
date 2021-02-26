@@ -28,6 +28,7 @@ Type 3 - Large Memory HPC
    :hidden:
 
    software/modules.rst
+   software/compilers.rst
    software/installed-apps.rst
    software/new-apps.rst
 
