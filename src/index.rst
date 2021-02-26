@@ -1,4 +1,4 @@
-Type 3 - Large Memory HPC 
+Type 3 - Large Memory HPC
 =========================
 
 
@@ -20,6 +20,7 @@ Type 3 - Large Memory HPC
 
    batch/submit
    batch/monitor
+   batch/intelmpi
 
 .. toctree::
    :maxdepth: 1
@@ -38,7 +39,3 @@ Type 3 - Large Memory HPC
    :hidden:
 
    help/troubleshooting
-
-
-   
-
