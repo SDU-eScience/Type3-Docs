@@ -1,7 +1,7 @@
 Troubleshooting
 ===============
 
-We provide troubleshooting guidance for our supported applications. 
+We provide troubleshooting guidance for the supported applications. 
 
 You can ask for assistance in two ways:
 

@@ -1,7 +1,7 @@
 Use of Intel MPI
 ===========================
 
-When you compile a program on the system, you can choose to use the Intel Compiler and the associated Intel MPI implementation. These tools can be loaded via the module system.
+When you compile a program on the system, you can choose to use the Intel Compiler and the associated Intel MPI implementation. These tools can be loaded via the `module system <../software/modules.html>`__.
 
 .. code-block:: console
 

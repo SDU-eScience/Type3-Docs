@@ -1,2 +1,12 @@
 Request an Account
 ==================
+
+To request an account for a project on Type 3 you should contact your local `Front Office <https://www.deic.dk/Supercomputere/Front-Office>`__.
+
+In the project application you have to specify:
+
+- name of the project;
+- amount of storage and compute-hours;
+- project collaborators.
+
+After the project is approved and the account created, the user will be contacted by the SDU Back Office and will be asked to send a `SSH key <ssh-login.html>`__ for the login.
