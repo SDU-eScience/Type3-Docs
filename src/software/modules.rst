@@ -22,7 +22,7 @@
 Modules System
 ==============
 
-Multiple versions of the same software are installed using the `Lmod <https://www.tacc.utexas.edu/research-development/tacc-projects/lmod>`__ enviromental modules system. 
+Multiple versions of the same software are accessible using the `Lmod <https://www.tacc.utexas.edu/research-development/tacc-projects/lmod>`__ enviromental modules system. 
 
 The modules system makes it very easy to specify which version you want to use and keeps everything consistent. There are also circumstances where one software program will have some environment setting or file that conflicts with a different program, and also has modules that help solve this problem.
 
@@ -56,10 +56,7 @@ Most software packages available on Type 3 can be found as a module. To see a li
   Autotools: Autotools/20200321-GCCcore-10.2.0
     This bundle collect the standard GNU build tools: Autoconf, Automake and libtool
 
-  Bison: Bison/3.3.2, Bison/3.7.1-GCCcore-10.2.0, Bison/3.7.1
-    Bison is a general-purpose parser generator that converts an annotated context-free grammar into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.
-
-  |ellipsis|
+  |nbsp| |ellipsis|
 
   |dash-line|
 
@@ -95,8 +92,9 @@ If you want a particular version, use instead: ``module load <module_name>/<modu
 	[testuser@fe-ac-02 ~]$ module list
 
 .. tip::
-
-	No modules loaded
+  
+  |br|
+  No modules loaded
 
 .. code-block:: console
 
@@ -122,11 +120,13 @@ You can print the list of currently loaded modules with the command:
 Unload a module
 ---------------
 
-To unload a module, use the command: ``module unload <module_name>``. To unload everything, use:  ``module purge``.
+To unload a module, use the command: ``module unload <module_name>``. This command automatically unloads all the dependencies.
 
-.. note::
+To unload everything, use: 
 
-	``module unload``  automatically unloads all the dependencies.
+.. code-block:: console
+
+  [testuser@fe-ac-02 ~]$ module purge
 
 Examine a module file
 ---------------------
@@ -202,17 +202,15 @@ The ``module`` command can be used in script, e.g. Slurm `batch scripts <../batc
 
 .. code-block:: bash
 
-	#! /bin/bash 
+    #!/bin/bash 
+    #SBATCH -N 1 -n 64
+    #SBATCH -p fat
+    #SBATCH -t 01:00:00
 
-	#SBATCH options 
-	#SBATCH ... 
+    module purge 
+    module load <list_of_modules> 
 
-	module purge 
-	module load <list_of_modules> 
-
-	... 
-
-	# Add below some commands depending on the modules
+    # Add below some commands depending on the modules
 
 
 Further reading

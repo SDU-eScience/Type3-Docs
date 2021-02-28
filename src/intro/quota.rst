@@ -17,4 +17,8 @@ All users and projects have associated quotas on resources, such as disk space a
    /work/testproject   25 TB               25 TB               0.00%
 
 
-For each associated project, this command shows the number of core-hours available for computation, and the amount of disk space used in the project's work folder. All users will also have 100 GB of space in their personal home folder.
+For each associated project, this command shows the number of core-hours available for computation, and the amount of disk space used in the project's work folder. 
+
+.. note::
+
+	All users will have 100 GB of space in their personal home folder.
