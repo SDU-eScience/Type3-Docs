@@ -1,7 +1,7 @@
 Compilers and Libraries
 =======================
 
-The following compiler toolchains were installed on the system using `EasyBuild <easybuild.html>`__.
+The following compiler toolchains are already installed on the system using `EasyBuild <easybuild.html>`__.
 
 .. rst-class:: docstable
 

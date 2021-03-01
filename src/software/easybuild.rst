@@ -11,9 +11,9 @@
 Easybuild
 =========
 
-All compilers, libraries and software available on Type 3 are installed and configured with `EasyBuild <https://easybuild.io/>`__.
+All compilers, libraries and software available on the Type 3 system are installed and configured with `EasyBuild <https://easybuild.io/>`__.
 
-EasyBuild is a software build and installation framework written in Python, which allows to deploy and manage many scientific applications and tools on HPC systems. 
+EasyBuild is a software build and installation framework written in Python, which allows to deploy and manage many scientific applications and tools on HPC systems.
 
 The EasyBuild module is loaded by default when the user access the frontend node.
 
@@ -22,12 +22,12 @@ The EasyBuild module is loaded by default when the user access the frontend node
 	[testuser@fe-ac-02 ~]$ module list
 
 .. tip::
- 
+
  |br|
  Currently Loaded Modules:
  |br|
  |nbsp|\1) EasyBuild/4.3.2
- 
+
 
 The dependencies and build parameters of each software release are specified in the corresponding EasyBuild `easyconfigs files <https://github.com/easybuilders/easybuild-easyconfigs>`__.
 
@@ -61,7 +61,7 @@ Each file specifies the installation parameters for a particular `compiler toolc
 Installing new software
 -----------------------
 
-The ``eb`` command is used to install new software from the corresponding easyconfig file. 
+The ``eb`` command is used to install new software from the corresponding easyconfig file.
 To check the software dependencies, run the ``eb`` command with the option ``--dry-run`` (or ``-D``). For example:
 
 .. code-block:: console
@@ -107,7 +107,7 @@ To check the software dependencies, run the ``eb`` command with the option ``
 	|br|
 	== Temporary directory /tmp/eb-9rE3Ix has been removed.
 
-All the dependencies marked with ``[x]`` are already installed on Type 3 and can be loaded with the corresponding module. 
+All the dependencies marked with ``[x]`` are already installed on the system and can be loaded with the corresponding module.
 
 The software and the missing dependencies can be installed using the option ``--robot`` (or ``-r``):
 
@@ -118,7 +118,7 @@ The software and the missing dependencies can be installed using the option ``-
 |br|
 The additional option ``--debug`` (or ``-d``) can be used to enable debug log mode. More options are reported `here <https://docs.easybuild.io/en/latest/version-specific/help.html>`__.
 
-By default EasyBuild will install the software in ``$HOME/easybuild/software`` and the corresponding module file in ``$HOME/easybuild/modules/all``. The path of the module file is automatically added to ``$MODULEPATH``, once the EasyBuild module is loaded. 
+By default EasyBuild will install the software in ``$HOME/easybuild/software`` and the corresponding module file in ``$HOME/easybuild/modules/all``. The path of the module file is automatically added to ``$MODULEPATH``, once the EasyBuild module is loaded.
 
 The user can also specify a different installation path for a particular software and the corresponding module using the option ``--installpath`` (or, more specifically,  ``--installpath-software`` and ``--installpath-modules``). In this case the new module path must be added with the command:  ``module use <new_module_path>``.
 

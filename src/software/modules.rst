@@ -22,20 +22,20 @@
 Modules System
 ==============
 
-Multiple versions of the same software are accessible using the `Lmod <https://www.tacc.utexas.edu/research-development/tacc-projects/lmod>`__ enviromental modules system. 
+Multiple versions of the same software are accessible using the `Lmod <https://www.tacc.utexas.edu/research-development/tacc-projects/lmod>`__ environmental modules system.
 
-The modules system makes it very easy to specify which version you want to use and keeps everything consistent. There are also circumstances where one software program will have some environment setting or file that conflicts with a different program, and also has modules that help solve this problem.
+The modules system makes it very easy to specify which version you want to use and keeps everything consistent. There are also circumstances where one software program will have some environment setting or file that conflicts with a different program, and in many cases the module system can also help solve this problem.
 
 Access modules
 --------------
 
-Most software packages available on Type 3 can be found as a module. To see a list of available software run the command:
+Most software packages available on the Type 3 system can be found as a module. To see a list of available software run the command:
 
 .. code-block:: console
 
 	[testuser@fe-ac-02 ~]$ module spider
 
-.. tip:: 
+.. tip::
 
   |br|
 
@@ -79,11 +79,11 @@ You can optionally specify a package name, and it will show you all available ve
 .. note::
 
     You can also use the command ``module avail`` to get the list of available packages in a different format.
-	 
+
 Load a module
 -------------
 
-To load a module, use the command: ``module load <module_name>``. The default version will get loaded. 
+To load a module, use the command: ``module load <module_name>``. The default version will automatically be loaded.
 
 If you want a particular version, use instead: ``module load <module_name>/<module_version>``. For example:
 
@@ -92,7 +92,7 @@ If you want a particular version, use instead: ``module load <module_name>/<modu
 	[testuser@fe-ac-02 ~]$ module list
 
 .. tip::
-  
+
   |br|
   No modules loaded
 
@@ -101,7 +101,7 @@ If you want a particular version, use instead: ``module load <module_name>/<modu
 	[testuser@fe-ac-02 ~]$ module load GCCcore/10.2.0
 
 .. tip::
-	
+
   |br|
   Currently Loaded Modules:
   |br|
@@ -120,9 +120,9 @@ You can print the list of currently loaded modules with the command:
 Unload a module
 ---------------
 
-To unload a module, use the command: ``module unload <module_name>``. This command automatically unloads all the dependencies.
+To unload a module, use the command: ``module unload <module_name>``. This command will automatically unload all the dependencies as well.
 
-To unload everything, use: 
+To unload everything, use:
 
 .. code-block:: console
 
@@ -140,7 +140,7 @@ If you want to see what the ``module`` command is doing to your environment, y
 .. tip::
 
   |br|
-  |dash-line|     
+  |dash-line|
   /opt/sys/easybuild/modules/compiler/GCCcore/10.2.0.lua:
   |br|
   |dash-line|
@@ -161,7 +161,7 @@ If you want to see what the ``module`` command is doing to your environment, y
   \================
   |br|
   |nbsp|\- Homepage: https://gcc.gnu.org/
-  |br| 
+  |br|
   ]])
   |br|
   whatis("Description: The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada,
@@ -198,17 +198,17 @@ If you want to see what the ``module`` command is doing to your environment, y
 Using modules in script
 -----------------------
 
-The ``module`` command can be used in script, e.g. Slurm `batch scripts <../batch/submit.html#writing-a-job-script>`__, as in the following example:
+The ``module`` command can also be used in script, such as Slurm `batch scripts <../batch/submit.html#writing-a-job-script>`__, as shown in the following example:
 
 .. code-block:: bash
 
-    #!/bin/bash 
+    #!/bin/bash
     #SBATCH -N 1 -n 64
     #SBATCH -p fat
     #SBATCH -t 01:00:00
 
-    module purge 
-    module load <list_of_modules> 
+    module purge
+    module load <list_of_modules>
 
     # Add below some commands depending on the modules
 
@@ -217,7 +217,3 @@ Further reading
 ---------------
 
 - `Lmode user guide <https://lmod.readthedocs.io/en/latest/010_user.html>`__
-
-
-
-
