@@ -26,9 +26,9 @@ A minimal job script would look something like this:
 * After the shebang any sbatch directives are added. An sbatch directive begins with ``#SBATCH`` followed by the option you want to set. These options can be overriden at execution by supplying them directly to the ``sbatch`` command.
 * If an additional ``#`` is prepended to the sbatch directive, it is ignored by Slurm.
 * After the sbatch directives, the actual job code is added. This is the code that will be executed.
-* For ease of use, write the content to a file that can be passed to ``sbatch`` (see 'Submitting a job script with sbatch' below - the examples assume the filename '``jobscript.sh``')
+* For ease of use, write the content to a file that can be passed to ``sbatch`` (see `Submitting a job script <submit.html#submitting-a-job-script>`__ with sbatch below - the examples assume the filename '``jobscript.sh``')
 
-In the above example, the code appends the value of the $RANDOM variable into a textfile called random.txt, it then prints them in order with the ``sort`` command.
+In the above example, the code appends the value of the ``$RANDOM`` variable into a textfile called ``random.txt``, it then prints them in order with the ``sort`` command.
 
 
 Job script tips
@@ -48,7 +48,7 @@ You do not need to specify any of the following in your job scripts:
 
 MPI jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-For MPI jobs you should use a combination of ``--nodes`` and ``--ntasks-per-node`` to get the number of nodes and MPI processes per node that you want. Both of these variables have a default value of one. If using Intel MPI, see the relevant section in the menu.
+For MPI jobs you should use a combination of ``--nodes`` and ``--ntasks-per-node`` to get the number of nodes and MPI processes per node that you want. Both of these variables have a default value of one. If using Intel MPI, check `here <intelmpi.html>`__.
 
 .. code-block:: bash
 

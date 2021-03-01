@@ -10,7 +10,7 @@ You can list all jobs for ``testuser`` like this:
 
    [testuser@fe-ac-02 ~]$ squeue -u testuser
 
-The -t option will allow you to filter which jobs are listed by their job state code. Examples of states are ``RUNNING`` and ``PENDING`` and they can be used like this:
+The ``-t`` option will allow you to filter which jobs are listed by their job state code. Examples of states are ``RUNNING`` and ``PENDING`` and they can be used like this:
 
 .. code-block:: console
 

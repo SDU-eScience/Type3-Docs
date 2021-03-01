@@ -34,9 +34,9 @@ On this page you will find information about how to apply for resources and basi
    :name: supported_software
    :hidden:
 
-   software/modules.rst
-   software/installed-apps.rst
-   software/new-apps.rst
+   Modules <software/modules.rst>
+   software/easybuild.rst
+   Compilers <software/compilers.rst>
 
 .. toctree::
    :maxdepth: 1
