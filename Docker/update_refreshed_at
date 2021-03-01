@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+### updates the metadata in Dockerfile
+
+rm Dockerfile
+cp Dockerfile.template Dockerfile
+
+refreshDate=$(date +%Y-%m-%d)
+
+searchdir="$(dirname $0)"
+
+COMMIT=$(git log --pretty=format:'%h' -n 1)
+
+find $searchdir -type f -name 'Dockerfile' | while read file ; do \
+	sed -i -e "s/COMMIT/$COMMIT/g" $file  \
+    && echo -e "added latest commit '$COMMIT' in $file" ;
+done
+
+find $searchdir -type f -name 'Dockerfile' | while read file ; do \
+    sed -i -e "s/BUILD_DATE/$refreshDate/g" $file  \
+    && echo -e "added build date '$refreshDate' in $file" ;
+done
+
+find $searchdir -type f -name 'Dockerfile' | while read file ; do \
+    sed -i -e "s/^ENV REFRESHED_AT.*/ENV REFRESHED_AT $refreshDate/" $file;
+done
+
+if [ -f Dockerfile-e ]; then
+
+	rm Dockerfile-e
+
+fi
+
+
+

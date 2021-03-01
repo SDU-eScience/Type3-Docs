@@ -1,0 +1,71 @@
+#!/bin/bash
+
+### every exit != 0 fails the script
+set -ue
+
+repo=$(git rev-parse --show-toplevel)
+
+### latest commit
+COMMIT=$(git log --pretty=format:'%h' -n 1)
+
+printf "\n"
+printf " ================================================== \n"
+printf " Deploy latest version of Type 3 Docs on the server \n"
+printf " ================================================== \n\n"
+
+printf ">> STEP 1: Update master branch \n\n"
+
+git checkout master
+git pull
+
+printf "\n"
+printf ">> STEP 2: Update Dockerfile \n\n"
+
+cd $repo/Docker
+
+./update_refreshed_at
+
+printf "\n"
+printf ">> STEP 3: Build Docker image \n\n"
+
+./docker-build
+docker images | grep -m1 dreg.cloud.sdu.dk/type3-docs/user-guide
+
+printf "\n"
+printf ">> STEP 4: Push the image to the Docker registry\n\n"
+
+docker push dreg.cloud.sdu.dk/type3-docs/user-guide:$COMMIT
+
+printf "\n"
+printf ">> STEP 5: Commit and push to GitHub repository\n\n"
+
+git commit -a -m "deployed new Type 3 User Guide at stage $COMMIT" 
+git push > /dev/null 2>&1
+
+printf "\n"
+printf ">> STEP 6: Create a new tag \n\n"
+
+git tag doc-$COMMIT
+git describe --abbrev=0 --tags
+git push --tags > /dev/null 2>&1
+
+printf "\n"
+printf ">> STEP 7: Push to deployment branch \n\n"
+
+git checkout deployment
+git pull > /dev/null 2>&1
+git merge master > /dev/null 2>&1
+git push 
+git checkout master > /dev/null 2>&1
+
+printf "\n"
+printf " ===================== \n"
+printf " Deployment completed! \n"
+printf " ===================== \n\n"
+
+
+
+
+
+
+

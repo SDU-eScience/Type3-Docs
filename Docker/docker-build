@@ -1,0 +1,5 @@
+#!/bin/bash
+
+VER=$(git log --pretty=format:'%h' -n 1)
+
+docker build -t dreg.cloud.sdu.dk/type3-docs/user-guide:$VER -f Dockerfile ../

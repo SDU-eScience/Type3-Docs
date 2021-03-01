@@ -1,0 +1,5 @@
+#!/bin/bash
+
+VER=$(docker images | grep user-guide | awk '{print $2}' 2>&1 | head -n 1)
+
+docker run --rm -p 80:80 -p 8080:8080 dreg.cloud.sdu.dk/type3-docs/user-guide:$VER
