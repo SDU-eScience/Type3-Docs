@@ -66,7 +66,7 @@ After your account has been created on the system, you are ready to login using 
 .. code-block:: console
 
    user@laptop:~$ ssh testuser@hpc-type3.sdu.dk
-   Welcome to the DeIC national Type 3 system
+   Welcome to the DeiC national Type 3 system
 
    The system is hosted by the SDU eScience Center
    https://escience.sdu.dk
