@@ -40,6 +40,7 @@ Job script tips
 * Use ``--time`` to set the wall time. Setting the maximum wall time as low as possible will allow Slurm to schedule your job on idle nodes currently waiting for a larger job to start.
 * Use ``--nodes`` to set the number of required nodes. If your job can be flexible, use a range of the number of nodes needed to run the job, such as ``--nodes=2-4``. In this case your job starts running when at least 2 nodes are available. If at that time 3 or 4 nodes are available, then your job gets all of them.
 * Use ``--ntasks-per-node`` to define the number of necessary MPI processes, for example 128 if you want a single process per core.
+* Use ``--mem`` to define how much memory is needed per node. By default you will be assigned 32G of memory per allocated core. Please do not request more than what is needed for the job to run.
 * Use ``--account`` to define the resource billing account. When left unspecified, then your default account is used. For this reason, this option is only relevant if you are part of multiple projects.
 * Use ``--exclusive`` to request exclusive access to the entire node. This will ensure that no other job is running on the node at the same time as your job. With this option you will be billed for the entire node, even if you are only using a subset of the cores.
 
@@ -49,7 +50,6 @@ Additional notes for job scripts
 You do not need to specify any of the following in your job scripts:
 
 * Partition: The default partition is automatically chosen when your job is submitted.
-* Memory: Your job is automatically assigned 32GB of memory per allocated core, up to 4TB when using a full node.
 
 
 MPI jobs
