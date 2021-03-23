@@ -128,6 +128,15 @@ To unload everything, use:
 
   [testuser@fe-ac-02 ~]$ module purge
 
+Show hidden modules
+-------------------
+
+To make the module overview simpler, by default a lot of modules are hidden. The hidden modules are mostly libraries and dependencies that rarely are needed on their own. To also show the hidden modules, add the ``--show-hidden`` option to the ``module`` command.
+
+.. code-block:: console
+
+  [testuser@fe-ac-02 ~]$ module --show-hidden avail
+
 Examine a module file
 ---------------------
 
