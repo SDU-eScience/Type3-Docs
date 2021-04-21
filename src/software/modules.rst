@@ -22,9 +22,9 @@
 Modules System
 ==============
 
-Multiple versions of the same software are accessible using the `Lmod <https://www.tacc.utexas.edu/research-development/tacc-projects/lmod>`__ environmental modules system.
+Multiple versions of the same software are accessible using the `Lmod <https://www.tacc.utexas.edu/research-development/tacc-projects/lmod>`__ environment modules system.
 
-The modules system makes it very easy to specify which version you want to use and keeps everything consistent. There are also circumstances where one software program will have some environment setting or file that conflicts with a different program, and in many cases the module system can also help solve this problem.
+The module system makes it very easy to specify which version you want to use and keeps everything consistent. There are also circumstances where one software program will have some environment setting or file that conflicts with a different program, and in many cases the module system can also help solve this problem.
 
 Access modules
 --------------
@@ -204,10 +204,10 @@ If you want to see what the ``module`` command is doing to your environment, y
   setenv("EBDEVELGCCCORE","/opt/sys/easybuild/software/GCCcore/10.2.0/easybuild/GCCcore-10.2.0-easybuild-devel")
 
 
-Using modules in script
------------------------
+Use modules in script
+---------------------
 
-The ``module`` command can also be used in script, such as Slurm `batch scripts <../batch/submit.html#writing-a-job-script>`__, as shown in the following example:
+The ``module`` command can also be used in scripts, such as Slurm `batch scripts <../batch/submit.html#writing-a-job-script>`__, as shown in the following example:
 
 .. code-block:: bash
 

@@ -1,3 +1,33 @@
+.. |br| raw:: html
+
+   <br>
+
+.. |nbsp| unicode:: U+00A0
+
+.. |randomart| raw:: html
+
+   +---[RSA 3072]----+
+   <br>
+   |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.=o...=O|
+   <br>
+   |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+o+&nbsp; o +|
+   <br>
+   |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..+ ..&nbsp;&nbsp; |
+   <br>
+   |&nbsp;&nbsp;&nbsp;&nbsp;+ .&nbsp; . .&nbsp; o&nbsp; |
+   <br>
+   |&nbsp;&nbsp;&nbsp;= + +S&nbsp;&nbsp;&nbsp; + . |
+   <br>
+   |&nbsp;&nbsp;&nbsp;&nbsp;* Eo.&nbsp;&nbsp;&nbsp;&nbsp; +.o|
+   <br>
+   |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* ..&nbsp; . + o+|
+   <br>
+   |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ o o * +..|
+   <br>
+   |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=o+.+&nbsp; .|
+   <br>
+   +----[SHA256]-----+
+
 SSH Login
 ==================
 Secure Shell (SSH) is a way to login to remote computers securely as all data is encrypted in both directions between the local computer and the remote computer.
@@ -16,6 +46,7 @@ First, start by checking for existing keys on your computer. Open a terminal and
 
    user@laptop:~$ ls -la ~/.ssh/
 
+|br|
 You should see a list of files in your ``.ssh`` directory if they exist.
 Check to see whether you already have a public SSH key. By default, filenames of public keys are one of the following:
 
@@ -25,6 +56,7 @@ Check to see whether you already have a public SSH key. By default, filenames of
    id_ed25519.pub
    id_rsa.pub
 
+|br|
 If you have a file ending with ``.pub`` and also have the file without ``.pub``, such as ``id_rsa.pub`` and ``id_rsa``, and you can remember the passphrase for your SSH key pair, then you can skip the next step.
 
 
@@ -35,26 +67,29 @@ Run the following command to generate a new SSH key. Replace *My PC* with a desc
 .. code-block:: console
 
    user@laptop:~$ ssh-keygen -C "My PC"
-   Generating public/private rsa key pair.
-   Enter file in which to save the key (/home/user/.ssh/id_rsa):
-   Enter passphrase (empty for no passphrase):
-   Enter same passphrase again:
-   Your identification has been saved in /home/user/.ssh/id_rsa
-   Your public key has been saved in /home/user/.ssh/id_rsa.pub
-   The key fingerprint is:
-   SHA256:TtFJwRZ+cB3d1FXoS863F6d6eIhyfpYqSEhmy5PP1LA My PC
-   The key's randomart image is:
-   +---[RSA 3072]----+
-   |         .=o...=O|
-   |         +o+  o +|
-   |        ..+ ..   |
-   |    + .  . .  o  |
-   |   = + +S    + . |
-   |    * Eo.     +.o|
-   |     * ..  . + o+|
-   |      + o o * +..|
-   |         =o+.+  .|
-   +----[SHA256]-----+
+
+.. tip::
+
+ |br|
+ Generating public/private rsa key pair.
+ |br|
+ Enter file in which to save the key (/home/user/.ssh/id_rsa):
+ |br|
+ Enter passphrase (empty for no passphrase):
+ |br|
+ Enter same passphrase again:
+ |br|
+ Your identification has been saved in /home/user/.ssh/id_rsa
+ |br|
+ Your public key has been saved in /home/user/.ssh/id_rsa.pub
+ |br|
+ The key fingerprint is:
+ |br|
+ SHA256:TtFJwRZ+cB3d1FXoS863F6d6eIhyfpYqSEhmy5PP1LA My PC
+ |br|
+ The key's randomart image is:
+ |br|
+ |randomart|
 
 When requesting an account, you need to provide the public part of the key to gain access to the system.
 
@@ -66,13 +101,8 @@ After your account has been created on the system, you are ready to login using 
 .. code-block:: console
 
    user@laptop:~$ ssh testuser@hpc-type3.sdu.dk
-   Welcome to the DeiC national Type 3 system
 
-   The system is hosted by the SDU eScience Center
-   https://escience.sdu.dk
-
-   [testuser@fe-ac-02 ~]$
-
+|br|
 To copy files to and from the system you can use direct ``scp`` or ``sftp`` to the frontend node. These operations will also require the use of your SSH key.
 
 
@@ -89,6 +119,7 @@ You can use the file ``~/.ssh/config`` to setup parameters for SSH that you othe
        Hostname hpc-type3.sdu.dk
        User testuser
 
+|br|
 With the above file in place, you can now simply use the following command to access the system.
 
 .. code-block:: console

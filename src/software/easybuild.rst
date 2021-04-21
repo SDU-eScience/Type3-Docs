@@ -13,9 +13,9 @@ Easybuild
 
 All compilers, libraries and software available on the Type 3 system are installed and configured with `EasyBuild <https://easybuild.io/>`__.
 
-EasyBuild is a software build and installation framework written in Python, which allows to deploy and manage many scientific applications and tools on HPC systems.
+EasyBuild is a software build and installation framework written in Python, which allows to deploy and manage several scientific applications and tools on HPC systems.
 
-The EasyBuild module is loaded by default when the user access the frontend node.
+The EasyBuild module is loaded by default when the user accesses the frontend node.
 
 .. code-block:: console
 
