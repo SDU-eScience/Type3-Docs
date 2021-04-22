@@ -10,7 +10,7 @@ To cancel a single job you can supply the ``jobid`` as the argument:
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ scancel <jobid>
+   [testuser@fe-ac-02 ~]$ scancel jobid
 
 |br|
 You can cancel all jobs for the user ``testuser`` with the ``-u`` option:

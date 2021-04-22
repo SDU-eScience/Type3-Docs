@@ -35,7 +35,7 @@ The ``scontrol`` command can be used to show detailed job information.
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ scontrol show jobid -dd <jobid>
+   [testuser@fe-ac-02 ~]$ scontrol show jobid -dd jobid
 
 |br|
 This information could be valuable when troubleshooting. For additional information, please consult the manual:

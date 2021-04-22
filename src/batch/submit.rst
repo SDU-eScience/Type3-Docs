@@ -29,7 +29,7 @@ A minimal job script would look something like this:
 |br|
 
 * The first line is a shebang interpreter directive, in this case the interpreter is the *Bash* shell environment.
-* After the shebang any sbatch directive is added. An sbatch directive begins with ``#SBATCH`` followed by the option you want to set. These options can be overridden at execution by supplying them directly to the ``sbatch`` command.
+* After the shebang all sbatch directives are added. An sbatch directive begins with ``#SBATCH`` followed by the option you want to set. These options can be overridden at execution by supplying them directly to the ``sbatch`` command.
 * If an additional ``#`` is prepended to the sbatch directive, it is ignored by Slurm.
 * After the sbatch directives, the actual job code is added. This is the code that will be executed.
 * For ease of use, write the content to a file that can be passed to ``sbatch`` (see `Submitting a job script <#submitting-a-job-script>`__ below - the examples assume the filename ``jobscript.sh``)
