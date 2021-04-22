@@ -1,3 +1,7 @@
+.. |br| raw:: html
+
+   <br>
+
 Monitor Jobs
 ============
 You can monitor your jobs with the ``squeue`` and ``scontrol`` commands.
@@ -10,14 +14,16 @@ You can list all jobs for ``testuser`` like this:
 
    [testuser@fe-ac-02 ~]$ squeue -u testuser
 
+|br|
 The ``-t`` option will allow you to filter which jobs are listed by their job state code. Examples of states are ``RUNNING`` and ``PENDING`` and they can be used like this:
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ squeue -u <testuser> -t RUNNING
-   [testuser@fe-ac-02 ~]$ squeue -u <testuser> -t PENDING
+   [testuser@fe-ac-02 ~]$ squeue -u testuser -t RUNNING
+   [testuser@fe-ac-02 ~]$ squeue -u testuser -t PENDING
 
-For a full list of possible job states, please consult the manual.
+|br|
+For a full list of possible job states, please consult the manual:
 
 .. code-block:: console
 
@@ -29,15 +35,17 @@ The ``scontrol`` command can be used to show detailed job information.
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ scontrol show jobid -dd <jobid>
+   [testuser@fe-ac-02 ~]$ scontrol show jobid -dd jobid
 
-This information could be valuable when troubleshooting. For additional information, please consult the manual.
+|br|
+This information could be valuable when troubleshooting. For additional information, please consult the manual:
 
 .. code-block:: console
 
    [testuser@fe-ac-02 ~]$ man scontrol
 
-Below is an example from the manual of a detailed job description as returned by ``scontrol``.
+|br|
+Below there is an example from the manual of a detailed job description as returned by ``scontrol``.
 
 .. code-block:: text
 
@@ -56,3 +64,7 @@ Below is an example from the manual of a detailed job description as returned by
              MinCPUsNode=2 MinMemoryNode=0 MinTmpDiskNode=0
              Features=(null) Reservation=(null)
              OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+
+
+
+
