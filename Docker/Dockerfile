@@ -43,7 +43,7 @@ RUN pip install cython wheel && \
 FROM nginx:alpine
 
 LABEL build_date="2021-05-12" \
-	  commit="71b830d" \
+	  commit="9471637" \
 	  description="Type 3 User Guide" \
 	  url="https://docs.hpc-type3.sdu.dk"
 
