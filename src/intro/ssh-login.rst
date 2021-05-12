@@ -229,19 +229,11 @@ You can proceed as follows:
 
    .. code-block:: console
 
-      [testuser@fe-ac-02 ~]$ mkdir .ssh
+      [testuser@fe-ac-02 ~]$ install -d -m 700 ~/.ssh
 
    .. code-block:: console
 
-      [testuser@fe-ac-02 ~]$ chmod 700 .ssh
-
-   .. code-block:: console
-
-      [testuser@fe-ac-02 ~]$ touch .ssh/authorized_keys
-
-   .. code-block:: console
-
-      [testuser@fe-ac-02 ~]$ chmod 600 .ssh/authorized_keys
+      [testuser@fe-ac-02 ~]$ install -D -m 600 /dev/null ~/.ssh/authorized_keys
 
    |br|
 
