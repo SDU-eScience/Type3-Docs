@@ -30,7 +30,7 @@
 
 SSH Login
 ==================
-Secure Shell (SSH) is a way to login to remote computers securely as all data is encrypted in both directions between the local computer and the remote computer.
+Secure Shell (SSH) is a way to log in to remote computers securely as all data is encrypted in both directions between the local computer and the remote computer.
 
 Using SSH keys is an even more secure way to use SSH to access a remote computer as there is no password exchange between the local and remote computer. An SSH key pair is generated on the local computer. The key pair consists of a private key which stays on your local computer and a public key which must be uploaded to the remote computer.
 
@@ -96,7 +96,7 @@ When requesting an account, you need to provide the public part of the key to ga
 
 Connecting to the system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-After your account has been created on the system, you are ready to login using your SSH key. Open a terminal and use the ``ssh`` command as shown below, where you should replace ``testuser`` with your assigned username.
+After your account has been created on the system, you are ready to log in using your SSH key. Open a terminal and use the ``ssh`` command as shown below, where you should replace ``testuser`` with your assigned username.
 
 .. code-block:: console
 
@@ -199,10 +199,58 @@ To configure the connection, complete the following steps.
 
 * Select *Connection » SSH » Auth* in the menu on the left, and select *Browse...* to locate the private SSH key you generated earlier.
 * Next, go to the submenu *Connection » Data*, and set the username you have been assigned on our system in Auto-login username.
-* Return to the main *Session* submenu, and write the hostname hpc-type3.sdu.dk.
+* Return to the main *Session* submenu, and write the hostname *hpc-type3.sdu.dk*.
 * Save these settings as a *Saved Session* to skip the previous steps at future logins, by writing e.g. Type3 in the *Saved Sessions* box, and click Save.
 
-In the future, you can simply double click saved session to load all the settings. To login simply click Open. You will be asked for the passphrase for your SSH key before you are allowed to login.
+In the future, you can simply double click saved session to load all the settings. To log in simply click *Open*. You will be asked for the passphrase for your SSH key before you are allowed to log in.
 
 .. image:: ../extra/figures/putty1.png
    :width: 600px
+
+
+Additional SSH keys
+----------------------
+
+After your account on the system is created, you will be able to access the cluster via SSH from your local laptop.
+
+In order to log in from a different computer, you shall import the public SSH key stored on that computer in your system account.
+You can proceed as follows:
+
+
+1. First, log in to the the cluster:
+
+   .. code-block:: console
+
+      user@laptop:~$ ssh testuser@hpc-type3.sdu.dk
+
+   |br|
+
+2. Then, create the file ``~/.ssh/authorized_keys`` in your home folder, which specifies the SSH keys that can be used for logging into your user account:
+
+   .. code-block:: console
+
+      [testuser@fe-ac-02 ~]$ mkdir .ssh
+
+   .. code-block:: console
+
+      [testuser@fe-ac-02 ~]$ chmod 700 .ssh
+
+   .. code-block:: console
+
+      [testuser@fe-ac-02 ~]$ touch .ssh/authorized_keys
+
+   .. code-block:: console
+
+      [testuser@fe-ac-02 ~]$ chmod 600 .ssh/authorized_keys
+
+   |br|
+
+3. Finally, edit the file ``authorized_keys`` and attach the public SSH keys stored on the other computers in the file, one key per line.
+
+
+
+
+
+
+
+
