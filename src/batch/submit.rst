@@ -41,7 +41,7 @@ In the above example, the code appends the value of the ``$RANDOM`` variable int
    On this system Slurm is configured to allow multiple simultaneous jobs on the same node. For example, if your job only needs 32 cores, then the remaining cores can be used to run another job at the same time. For this reason, make sure you correctly specify how many cores your job will need.
 
 
-Job script tips
+Job script directives
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Use ``--time`` to set the wall time. Setting the maximum wall time as low as possible will allow Slurm to schedule your job on idle nodes currently waiting for a larger job to start.
 * Use ``--nodes`` to set the number of required nodes. If your job can be flexible, use a range of the number of nodes needed to run the job, such as ``--nodes=2-4``. In this case your job starts running when at least 2 nodes are available. If at that time 3 or 4 nodes are available, then your job gets all of them.
@@ -49,6 +49,7 @@ Job script tips
 * Use ``--mem`` to define how much memory is needed per node. By default you will be assigned 32 GB of memory per allocated core. Please do not request more than what is needed for the job to run.
 * Use ``--account`` to define the resource billing account. When left unspecified, then your default account is used. For this reason, this option is only relevant if you are part of multiple projects.
 * Use ``--exclusive`` to request exclusive access to the entire node. This will ensure that no other job is running on the node at the same time as your job. With this option you will be billed for the entire node, even if you are only using a subset of the cores.
+* Use ``--requeue`` to automatically requeue the job if it either fails or is being preempted by a higher priority job.
 
 
 Additional notes for job scripts

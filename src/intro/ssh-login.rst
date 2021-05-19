@@ -211,11 +211,9 @@ In the future, you can simply double click saved session to load all the setting
 Additional SSH keys
 ----------------------
 
-After your account on the system is created, you will be able to access the cluster via SSH from your local laptop.
+After your account on the system has been created, you will be able to access the cluster via SSH from your local laptop.
 
-In order to log in from a different computer, you shall import the public SSH key stored on that computer in your system account.
-You can proceed as follows:
-
+In order to log in from a different computer, you need to copy the public SSH key stored on that computer to your user account on the cluster.
 
 1. First, log in to the the cluster:
 
@@ -223,26 +221,13 @@ You can proceed as follows:
 
       user@laptop:~$ ssh testuser@hpc-type3.sdu.dk
 
-   |br|
 
-2. Then, create the file ``~/.ssh/authorized_keys`` in your home folder, which specifies the SSH keys that can be used for logging into your user account:
+2. Then, create the file ``~/.ssh/authorized_keys`` in your home folder, which contains the SSH keys that can be used for logging into your user account:
 
    .. code-block:: console
 
       [testuser@fe-ac-02 ~]$ install -d -m 700 ~/.ssh
-
-   .. code-block:: console
-
       [testuser@fe-ac-02 ~]$ install -D -m 600 /dev/null ~/.ssh/authorized_keys
 
-   |br|
 
-3. Finally, edit the file ``authorized_keys`` and attach the public SSH keys stored on the other computers in the file, one key per line.
-
-
-
-
-
-
-
-
+3. Finally, edit the file ``authorized_keys`` and add the public SSH keys form your other computers, one key per line.
