@@ -41,8 +41,10 @@ In the above example, the code appends the value of the ``$RANDOM`` variable int
    On this system Slurm is configured to allow multiple simultaneous jobs on the same node. For example, if your job only needs 32 cores, then the remaining cores can be used to run another job at the same time. For this reason, make sure you correctly specify how many cores your job will need.
 
 
-Job script directives
+Useful directives
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The list below describes some of the most commen directives used in a job script. For a more detailed list of options, look at the `official documentation <https://slurm.schedmd.com/sbatch.html>`__.
+
 * Use ``--time`` to set the wall time. Setting the maximum wall time as low as possible will allow Slurm to schedule your job on idle nodes currently waiting for a larger job to start.
 * Use ``--nodes`` to set the number of required nodes. If your job can be flexible, use a range of the number of nodes needed to run the job, such as ``--nodes=2-4``. In this case your job starts running when at least 2 nodes are available. If at that time 3 or 4 nodes are available, then your job gets all of them.
 * Use ``--ntasks-per-node`` to define the number of necessary MPI processes, for example 128 if you want a single process per core.
@@ -52,11 +54,22 @@ Job script directives
 * Use ``--requeue`` to automatically requeue the job if it either fails or is being preempted by a higher priority job.
 
 
-Additional notes for job scripts
+Additional notes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You do not need to specify any of the following in your job scripts:
 
 * Partition: The default partition is automatically chosen when your job is submitted.
+
+
+Scavenger jobs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The cluster is configured to allow so-called *scavenger* jobs to run free-of-charge when the queue is empty. However, these jobs will be preempted (killed) as soon as a normal priority job needs the resources. To run a scavenger job add the following directive to your job script.
+
+.. code-block:: bash
+
+   #SBATCH --qos=scavenger
+
+If you want to automatically reschedule your scavenger jobs upon preemption, use the ``--requeue`` directive describe above.
 
 
 MPI jobs

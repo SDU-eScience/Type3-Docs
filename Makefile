@@ -4,6 +4,7 @@
 SPHINXOPTS	  =
 SPHINXBUILD   = sphinx-build
 BUILDDIR      = _build
+OPENCMD       = $(shell which browse open)
 
 ## User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -36,5 +37,4 @@ html:
 .PHONY: run
 run:
 	@echo "Open static website."
-	open _build/html/index.html
-
+	@$(word 1, $(OPENCMD)) "$(BUILDDIR)/html/index.html"
