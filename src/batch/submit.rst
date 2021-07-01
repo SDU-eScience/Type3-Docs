@@ -63,13 +63,13 @@ You do not need to specify any of the following in your job scripts:
 
 Scavenger jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The cluster is configured to allow so-called *scavenger* jobs to run free-of-charge when the queue is empty. However, these jobs will be preempted (killed) as soon as a normal priority job needs the resources. To run a scavenger job add the following directive to your job script.
+The cluster is configured to allow so-called *scavenger* jobs to run free-of-charge when there are available resources. However, these jobs will be preempted (killed) as soon as a normal priority job needs the resources. To run a scavenger job add the following directive to your job script.
 
 .. code-block:: bash
 
    #SBATCH --qos=scavenger
 
-If you want to automatically reschedule your scavenger jobs upon preemption, use the ``--requeue`` directive describe above.
+If you want to automatically reschedule your scavenger jobs upon preemption, use the ``--requeue`` directive described above.
 
 
 MPI jobs

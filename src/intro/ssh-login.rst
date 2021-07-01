@@ -215,19 +215,25 @@ After your account on the system has been created, you will be able to access th
 
 In order to log in from a different computer, you need to copy the public SSH key stored on that computer to your user account on the cluster.
 
-1. First, log in to the the cluster:
+First, log in to the the cluster:
 
-   .. code-block:: console
+.. code-block:: console
 
-      user@laptop:~$ ssh testuser@hpc-type3.sdu.dk
-
-
-2. Then, create the file ``~/.ssh/authorized_keys`` in your home folder, which contains the SSH keys that can be used for logging into your user account:
-
-   .. code-block:: console
-
-      [testuser@fe-ac-02 ~]$ install -d -m 700 ~/.ssh
-      [testuser@fe-ac-02 ~]$ install -D -m 600 /dev/null ~/.ssh/authorized_keys
+   user@laptop:~$ ssh testuser@hpc-type3.sdu.dk
 
 
-3. Finally, edit the file ``authorized_keys`` and add the public SSH keys form your other computers, one key per line.
+The file ``~/.ssh/authorized_keys`` should already exist in your home folder. Any key added to this file (one key per line) will be accepted when accessing the system. Use your favorite editor, such as ``vim``, ``nano``, or ``mcedit``, to modify the file.
+
+After editing the file, the content should look smilar to this:
+
+.. code-block:: console
+
+   [testuser@fe-ac-02 ~]$ cat ~/.ssh/authorized_keys
+
+.. tip::
+
+   ssh-ed25519 AAAA..xyz MyLaptop
+   |br|
+   ssh-rsa AAAA..xyz MyDesktop
+
+In this example, the keys have been redacted, and in reality they will be a lot longer.
