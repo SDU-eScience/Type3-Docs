@@ -25,12 +25,13 @@ help:
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILDDIR)/html/*
-	rm -rf $(BUILDDIR)/doctrees/*
+	@rm -rf $(BUILDDIR)/html/*
+	@rm -rf $(BUILDDIR)/doctrees/*
+	@echo "Remove build directory."
 
 .PHONY: html
 html:
-	cd src ; $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) ../$(BUILDDIR)/html
+	@cd ./src && $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) ../$(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in ../$(BUILDDIR)/html."
 
