@@ -31,7 +31,9 @@ All users and projects have associated quotas on resources, such as disk space a
  |myquota|
 
 
-For each associated project, this command shows the number of core-hours available for computation, and the amount of disk space used in the project's work folder. 
+For each associated project, this command shows the number of core-hours available for computation, and the amount of disk space used in the project's work folder.
+
+When appending the ``-l`` option to the command, it will show (in percentage) how many core-hours each user in the project has consumed. This is primarily useful for PIs to keep track of how the resources are being spent.
 
 .. note::
 
