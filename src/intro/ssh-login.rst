@@ -228,7 +228,7 @@ After editing the file, the content should look smilar to this:
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ cat ~/.ssh/authorized_keys
+   [testuser@frontend ~]$ cat ~/.ssh/authorized_keys
 
 .. tip::
 

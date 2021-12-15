@@ -24,7 +24,7 @@ All users and projects have associated quotas on resources, such as disk space a
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ myquota
+   [testuser@frontend ~]$ myquota
 
 .. tip::
 

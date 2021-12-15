@@ -1,7 +1,7 @@
 Request an Account
 ==================
 
-To request an account for a project on Type 3 you should contact your local `Front Office <https://www.deic.dk/Supercomputere/Front-Office>`__.
+To request an account for a project on Type 3 you should contact your local `Front Office <https://www.deic.dk/da/Front-Office>`__.
 
 In the project application you have to specify:
 

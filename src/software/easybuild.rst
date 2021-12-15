@@ -19,7 +19,7 @@ The EasyBuild module is loaded by default when the user accesses the frontend no
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$ module list
+	[testuser@frontend ~]$ module list
 
 .. tip::
 
@@ -38,7 +38,7 @@ To search for all available easyconfig files, use the option ``--search`` (or ``
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$  eb -S '^Python-3.6.6-*'
+	[testuser@frontend ~]$  eb -S '^Python-3.6.6-*'
 
 .. tip::
 
@@ -66,7 +66,7 @@ To check the software dependencies, run the ``eb`` command with the option ``
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -D
+	[testuser@frontend ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -D
 
 .. tip::
 
@@ -113,7 +113,7 @@ The software and the missing dependencies can be installed using the option ``-
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -r
+	[testuser@frontend ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -r
 
 |br|
 The additional option ``--debug`` (or ``-d``) can be used to enable debug log mode. More options are reported `here <https://docs.easybuild.io/en/latest/version-specific/help.html>`__.
@@ -126,7 +126,7 @@ An overview of the default EasyBuild configuration settings can be desplayed wit
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$ eb --show-config
+	[testuser@frontend ~]$ eb --show-config
 
 .. tip::
 

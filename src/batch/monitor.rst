@@ -12,22 +12,22 @@ You can list all jobs for ``testuser`` like this:
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ squeue -u testuser
+   [testuser@frontend ~]$ squeue -u testuser
 
 |br|
 The ``-t`` option will allow you to filter which jobs are listed by their job state code. Examples of states are ``RUNNING`` and ``PENDING`` and they can be used like this:
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ squeue -u testuser -t RUNNING
-   [testuser@fe-ac-02 ~]$ squeue -u testuser -t PENDING
+   [testuser@frontend ~]$ squeue -u testuser -t RUNNING
+   [testuser@frontend ~]$ squeue -u testuser -t PENDING
 
 |br|
 For a full list of possible job states, please consult the manual:
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ man squeue
+   [testuser@frontend ~]$ man squeue
 
 List detailed job information
 --------------------------------------------
@@ -35,14 +35,14 @@ The ``scontrol`` command can be used to show detailed job information.
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ scontrol show jobid -dd jobid
+   [testuser@frontend ~]$ scontrol show jobid -dd jobid
 
 |br|
 This information could be valuable when troubleshooting. For additional information, please consult the manual:
 
 .. code-block:: console
 
-   [testuser@fe-ac-02 ~]$ man scontrol
+   [testuser@frontend ~]$ man scontrol
 
 |br|
 Below there is an example from the manual of a detailed job description as returned by ``scontrol``.
@@ -64,7 +64,3 @@ Below there is an example from the manual of a detailed job description as retur
              MinCPUsNode=2 MinMemoryNode=0 MinTmpDiskNode=0
              Features=(null) Reservation=(null)
              OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
-
-
-
-

@@ -33,7 +33,7 @@ Most software packages available on the Type 3 system can be found as a module. 
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$ module spider
+	[testuser@frontend ~]$ module spider
 
 .. tip::
 
@@ -89,7 +89,7 @@ If you want a particular version, use instead: ``module load <module_name>/<modu
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$ module list
+	[testuser@frontend ~]$ module list
 
 .. tip::
 
@@ -98,7 +98,7 @@ If you want a particular version, use instead: ``module load <module_name>/<modu
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$ module load GCCcore/10.2.0
+	[testuser@frontend ~]$ module load GCCcore/10.2.0
 
 .. tip::
 
@@ -114,7 +114,7 @@ You can print the list of currently loaded modules with the command:
 
 .. code-block:: console
 
-  [testuser@fe-ac-02 ~]$ module list
+  [testuser@frontend ~]$ module list
 
 
 Unload a module
@@ -126,7 +126,7 @@ To unload everything, use:
 
 .. code-block:: console
 
-  [testuser@fe-ac-02 ~]$ module purge
+  [testuser@frontend ~]$ module purge
 
 Show hidden modules
 -------------------
@@ -135,7 +135,7 @@ To make the module overview simpler, by default a lot of modules are hidden. The
 
 .. code-block:: console
 
-  [testuser@fe-ac-02 ~]$ module --show-hidden avail
+  [testuser@frontend ~]$ module --show-hidden avail
 
 Examine a module file
 ---------------------
@@ -144,7 +144,7 @@ If you want to see what the ``module`` command is doing to your environment, y
 
 .. code-block:: console
 
-	[testuser@fe-ac-02 ~]$ module show GCCcore/10.2.0
+	[testuser@frontend ~]$ module show GCCcore/10.2.0
 
 .. tip::
 
