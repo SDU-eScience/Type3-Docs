@@ -42,14 +42,14 @@ RUN pip install cython wheel && \
 
 FROM nginx:alpine
 
-LABEL build_date="2021-08-18" \
-	  commit="75ff570" \
+LABEL build_date="2022-01-17" \
+	  commit="608186c" \
 	  description="Type 3 User Guide" \
 	  url="https://docs.hpc-type3.sdu.dk"
 
 MAINTAINER Emiliano Molinaro "molinaro@imada.sdu.dk"
 
-ENV REFRESHED_AT 2021-08-18
+ENV REFRESHED_AT 2022-01-17
 
 ## Copy static webserver
 COPY --from=builder /type3/_build/html /usr/share/nginx/html/type3
