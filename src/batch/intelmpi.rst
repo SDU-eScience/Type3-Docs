@@ -9,17 +9,17 @@ When you compile a program on the system, you can choose to use the Intel Compil
 
 .. code-block:: console
 
-   [testuser@frontend ~]$ module load intel/2020b
+   [testuser@frontend ~]$ module load intel/2022a
 
-|br|
-When your program is compiled with Intel MPI you need to use the associated ``mpirun`` command to launch the program in your Slurm submit scripts instead of ``srun``. This is due to lack of proper integration between Intel MPI and Slurm in our system. The following is an example of a submit script that uses Intel MPI to launch a program.
+
+When your program is compiled with Intel MPI you need to use the associated ``mpirun`` command to launch the program in your Slurm job script, instead of ``srun``. This is due to lack of proper PMIx support in Intel MPI, which is normally used by Slurm for launching MPI jobs. The following is an example of a job script that uses Intel MPI to launch a program.
 
 .. code-block:: bash
 
    #!/bin/bash
-   #SBATCH -N 1 -n 64
-   #SBATCH -p fat
-   #SBATCH -t 01:00:00
+   #SBATCH --nodes 2
+   #SBATCH --ntasks-per-node 128
+   #SBATCH --time 2:00:00
 
-   module load intel/2020b
+   module load intel/2022a
    mpirun /path/to/your_program [program options]

@@ -1,7 +1,7 @@
 System Description
 ==================
 
-The system consists of four compute nodes, a frontend node for accessing the system, and an IBM Elastic Storage system.
+The system consists of 14 compute nodes, a frontend node for accessing the system, and an IBM Elastic Storage system.
 
 **Summary**
 
