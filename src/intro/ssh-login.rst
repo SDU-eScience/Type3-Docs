@@ -34,7 +34,7 @@ Secure Shell (SSH) is a way to log in to remote computers securely as all data i
 
 Using SSH keys is an even more secure way to use SSH to access a remote computer as there is no password exchange between the local and remote computer. An SSH key pair is generated on the local computer. The key pair consists of a private key which stays on your local computer and a public key which must be uploaded to the remote computer.
 
-Using SSH keys is the only way to get remote access to the Type 3 system. The steps below describe how to generate your own SSH key for access to the cluster.
+Using SSH keys is the only way to get remote access to the system. The steps below describe how to generate your own SSH key for access to the cluster.
 
 Linux/Mac
 ------------------

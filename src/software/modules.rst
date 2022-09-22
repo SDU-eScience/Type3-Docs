@@ -29,7 +29,7 @@ The module system makes it very easy to specify which version you want to use a
 Access modules
 --------------
 
-Most software packages available on the Type 3 system can be found as a module. To see a list of available software run the command:
+Most software packages available on the system can be found as a module. To see a list of available software run the command:
 
 .. code-block:: console
 

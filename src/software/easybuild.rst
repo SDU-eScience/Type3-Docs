@@ -11,7 +11,7 @@
 Easybuild
 =========
 
-All compilers, libraries and software available on the Type 3 system are installed and configured with `EasyBuild <https://easybuild.io/>`__.
+All compilers, libraries and software available on the system are installed and configured with `EasyBuild <https://easybuild.io/>`__.
 
 EasyBuild is a software build and installation framework written in Python, which allows to deploy and manage several scientific applications and tools on HPC systems.
 
@@ -122,7 +122,7 @@ By default EasyBuild will install the software in ``$HOME/easybuild/software``�
 
 The user can also specify a different installation path for a particular software and the corresponding module using the option ``--installpath`` (or, more specifically,  ``--installpath-software`` and ``--installpath-modules``). In this case the new module path must be added with the command:  ``module use <new_module_path>``.
 
-An overview of the default EasyBuild configuration settings can be desplayed with the command:
+An overview of the default EasyBuild configuration settings can be displayed with the command:
 
 .. code-block:: console
 
@@ -151,7 +151,7 @@ An overview of the default EasyBuild configuration settings can be desplayed wit
 	|br|
 	repositorypath (E) = /home/testuser/easybuild/ebfiles_repo
 	|br|
-	robot-paths    (D) = /opt/sys/easybuild/software/EasyBuild/4.3.2/easybuild/easyconfigs
+	robot-paths    (E) = /opt/sys/easybuild-easyconfigs/easybuild/easyconfigs
 	|br|
 	sourcepath     (E) = /home/testuser/easybuild/sources
 
