@@ -1,7 +1,3 @@
-.. |br| raw:: html
-
-   <br>
-
 Submit Jobs
 ===========
 Jobs can be submitted with either one of the following commands: ``srun``, ``salloc`` or ``sbatch``.
@@ -15,16 +11,16 @@ A minimal job script would look something like this:
 
 .. code-block:: bash
 
-   #!/bin/bash
-   #SBATCH --nodes 1                 # number of nodes
-   #SBATCH --ntasks-per-node 1       # number of cores per node
-   #SBATCH --time 2:00:00            # max time (HH:MM:SS)
+	#!/bin/bash
+	#SBATCH --nodes 1                 # number of nodes
+	#SBATCH --ntasks-per-node 1       # number of cores per node
+	#SBATCH --time 2:00:00            # max time (HH:MM:SS)
 
-   for i in {1..10000}; do
-   echo $RANDOM >> random.txt
-   done
+	for i in {1..10000}; do
+	echo $RANDOM >> random.txt
+	done
 
-   sort random.txt
+	sort random.txt
 
 * The first line is a shebang interpreter directive, in this case the interpreter is the *Bash* shell environment.
 * After the shebang all sbatch directives are added. An sbatch directive begins with ``#SBATCH`` followed by the option you want to set. These options can be overridden at execution by supplying them directly to the ``sbatch`` command.
@@ -36,7 +32,7 @@ In the above example, the code appends the value of the ``$RANDOM`` variable to 
 
 .. note::
 
-   On this system Slurm is configured to allow multiple simultaneous jobs on the same node. For example, if your job only needs 32 cores, then the remaining cores can be used to run another job at the same time. For this reason, make sure you correctly specify how many cores your job will need.
+	On this system Slurm is configured to allow multiple simultaneous jobs on the same node. For example, if your job only needs 32 cores, then the remaining cores can be used to run another job at the same time. For this reason, make sure you correctly specify how many cores your job will need.
 
 
 Useful directives
@@ -59,7 +55,7 @@ The cluster is configured to allow so-called *scavenger* jobs to run free-of-cha
 
 .. code-block:: bash
 
-   #SBATCH --qos=scavenger
+	#SBATCH --qos=scavenger
 
 If you want to automatically reschedule your scavenger jobs upon preemption, use the ``--requeue`` directive described above.
 
@@ -70,7 +66,7 @@ Two of the nodes have a large NVMe for local scratch space. To request these nod
 
 .. code-block:: bash
 
-   #SBATCH --constraint=scratch
+	#SBATCH --constraint=scratch
 
 The scratch space is available under ``/scratch``. All data in this directory will be deleted when the job terminates.
 
@@ -81,24 +77,24 @@ For MPI jobs you should use a combination of ``--nodes`` and ``--ntasks-per-node
 
 .. code-block:: bash
 
-   #!/bin/bash
-   #SBATCH --nodes 2                 # number of nodes
-   #SBATCH --ntasks-per-node 128     # number of MPI tasks per node
-   #SBATCH --time 2:00:00            # max time (HH:MM:SS)
+	#!/bin/bash
+	#SBATCH --nodes 2                 # number of nodes
+	#SBATCH --ntasks-per-node 128     # number of MPI tasks per node
+	#SBATCH --time 2:00:00            # max time (HH:MM:SS)
 
-   echo Running on "$(hostname)"
-   echo Available nodes: "$SLURM_NODELIST"
-   echo Slurm_submit_dir: "$SLURM_SUBMIT_DIR"
-   echo Start time: "$(date)"
+	echo Running on "$(hostname)"
+	echo Available nodes: "$SLURM_NODELIST"
+	echo Slurm_submit_dir: "$SLURM_SUBMIT_DIR"
+	echo Start time: "$(date)"
 
-   # Load the modules used when compiling the application
-   module purge
-   module load foss/2022a
+	# Load the modules used when compiling the application
+	module purge
+	module load foss/2022a
 
-   # Start a total of 2*128 MPI processes
-   srun my-mpi-application -i input.txt -o output.txt
+	# Start a total of 2*128 MPI processes
+	srun my-mpi-application -i input.txt -o output.txt
 
-   echo Done.
+	echo Done.
 
 
 Submitting a job script
@@ -107,7 +103,7 @@ You can submit a job script with the ``sbatch`` command like this:
 
 .. code-block:: console
 
-   [testuser@frontend ~]$ sbatch jobscript.sh
+	[testuser@frontend ~]$ sbatch jobscript.sh
 
 To add additional options, or to override options specified in the job script, add the new values to sbatch command when submitting the job script.
 
@@ -115,10 +111,10 @@ In the following example, the ``--time`` option is passed to ``sbatch`` command 
 
 .. code-block:: console
 
-   [testuser@frontend ~]$ sbatch --time 4:00:00 jobscript.sh
+	[testuser@frontend ~]$ sbatch --time 4:00:00 jobscript.sh
 
 For more information about ``sbatch`` and to see a full list of the available options, consult the manual.
 
 .. code-block:: console
 
-   [testuser@frontend ~]$ man sbatch
+	[testuser@frontend ~]$ man sbatch

@@ -1,12 +1,4 @@
-.. |br| raw:: html
-
-	<br>
-
 .. |nbsp| unicode:: U+00A0
-
-.. |ellipsis| raw:: html
-
-	<object style="font-size:30px;font-weight:700;">&#x22EE;</object>
 
 Easybuild
 =========
@@ -23,10 +15,8 @@ The EasyBuild module is loaded by default when the user accesses the frontend no
 
 .. tip::
 
- |br|
- Currently Loaded Modules:
- |br|
- |nbsp|\1) EasyBuild/4.3.2
+	Currently Loaded Modules:
+	|nbsp| |nbsp|\1) EasyBuild/4.3.2
 
 
 The dependencies and build parameters of each software release are specified in the corresponding EasyBuild `easyconfigs files <https://github.com/easybuilders/easybuild-easyconfigs>`__.
@@ -38,22 +28,15 @@ To search for all available easyconfig files, use the option ``--search`` (or ``
 
 .. code-block:: console
 
-	[testuser@frontend ~]$  eb -S '^Python-3.6.6-*'
+	[testuser@frontend ~]$  eb -S '^Python-3.6.6'
 
 .. tip::
+	CFGS1=/opt/sys/easybuild-easyconfigs/easybuild/easyconfigs/p/Python
+	* $CFGS1/Python-3.6.6-foss-2018b.eb
+	* $CFGS1/Python-3.6.6-fosscuda-2018b.eb
+	* $CFGS1/Python-3.6.6-intel-2018b.eb
+	* $CFGS1/Python-3.6.6-iomkl-2018b.eb
 
- |br|
- == found valid index for /opt/sys/easybuild/software/EasyBuild/4.3.2/easybuild/easyconfigs, so using it...
- |br|
- CFGS1=/opt/sys/easybuild/software/EasyBuild/4.3.2/easybuild/easyconfigs/p/Python
- |br|
- |nbsp|\* $CFGS1/Python-3.6.6-foss-2018b.eb
- |br|
- |nbsp|\* $CFGS1/Python-3.6.6-fosscuda-2018b.eb
- |br|
- |nbsp|\* $CFGS1/Python-3.6.6-intel-2018b.eb
- |br|
- |nbsp|\* $CFGS1/Python-3.6.6-iomkl-2018b.eb
 
 Each file specifies the installation parameters for a particular `compiler toolchain <compilers.html>`__.
 
@@ -70,41 +53,23 @@ To check the software dependencies, run the ``eb`` command with the option ``
 
 .. tip::
 
-	|br|
 	== temporary log file in case of crash /tmp/eb-9rE3Ix/easybuild-yWJqtE.log
-	|br|
 	== found valid index for /opt/sys/easybuild/software/EasyBuild/4.3.2/easybuild/easyconfigs, so using it...
-	|br|
 	== found valid index for /opt/sys/easybuild/software/EasyBuild/4.3.2/easybuild/easyconfigs, so using it...
-	|br|
 	Dry run: printing build status of easyconfigs and dependencies
-	|br|
 	CFGS=/opt/sys/easybuild/software/EasyBuild/4.3.2/easybuild/easyconfigs
-	|br|
 	|nbsp|\* [x] $CFGS/m/M4/M4-1.4.18.eb (module: M4/1.4.18)
-	|br|
 	|nbsp|\* [x] $CFGS/b/Bison/Bison-3.7.1.eb (module: Bison/3.7.1)
-	|br|
 	|nbsp|\* [x] $CFGS/b/Bison/Bison-3.3.2.eb (module: Bison/3.3.2)
-	|br|
 	|nbsp|\* [x] $CFGS/z/zlib/zlib-1.2.11.eb (module: zlib/1.2.11)
-	|br|
 	|nbsp|\* [x] $CFGS/h/help2man/help2man-1.47.4.eb (module: help2man/1.47.4)
-	|br|
 	|nbsp|\* [x] $CFGS/f/flex/flex-2.6.4.eb (module: flex/2.6.4)
-	|br|
 	|nbsp|\* [x] $CFGS/b/binutils/binutils-2.35.eb (module: binutils/2.35)
-	|br|
 	|nbsp|\* [x] $CFGS/g/GCCcore/GCCcore-10.2.0.eb (module: GCCcore/10.2.0)
-	|br|
-	|nbsp| |ellipsis|
-	|br|
+	...
 	|nbsp|\* [ ] $CFGS/g/GMP/GMP-6.2.0-GCCcore-10.2.0.eb (module: GMP/6.2.0-GCCcore-10.2.0)
-	|br|
 	|nbsp|\* [ ] $CFGS/p/Python/Python-3.8.6-GCCcore-10.2.0.eb (module: Python/3.8.6-GCCcore-10.2.0)
-	|br|
 	== Temporary log file(s) /tmp/eb-9rE3Ix/easybuild-yWJqtE.log* have been removed.
-	|br|
 	== Temporary directory /tmp/eb-9rE3Ix has been removed.
 
 All the dependencies marked with ``[x]`` are already installed on the system and can be loaded with the corresponding module.
@@ -115,7 +80,6 @@ The software and the missing dependencies can be installed using the option ``-
 
 	[testuser@frontend ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -r
 
-|br|
 The additional option ``--debug`` (or ``-d``) can be used to enable debug log mode. More options are reported `here <https://docs.easybuild.io/en/latest/version-specific/help.html>`__.
 
 By default EasyBuild will install the software in ``$HOME/easybuild/software`` and the corresponding module file in ``$HOME/easybuild/modules/all``. The path of the module file is automatically added to ``$MODULEPATH``, once the EasyBuild module is loaded.
@@ -130,29 +94,17 @@ An overview of the default EasyBuild configuration settings can be displayed wit
 
 .. tip::
 
-	|br|
 	#
-	|br|
 	# Current EasyBuild configuration
-	|br|
 	# (C: command line argument, D: default value, E: environment variable, F: configuration file)
-	|br|
 	#
-	|br|
 	buildpath      (E) = /home/testuser/easybuild/build
-	|br|
 	containerpath  (E) = /home/testuser/easybuild/containers
-	|br|
 	installpath    (E) = /home/testuser/easybuild
-	|br|
 	packagepath    (E) = /home/testuser/easybuild/packages
-	|br|
 	prefix         (E) = /home/testuser/easybuild
-	|br|
 	repositorypath (E) = /home/testuser/easybuild/ebfiles_repo
-	|br|
 	robot-paths    (E) = /opt/sys/easybuild-easyconfigs/easybuild/easyconfigs
-	|br|
 	sourcepath     (E) = /home/testuser/easybuild/sources
 
 

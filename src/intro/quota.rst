@@ -1,34 +1,22 @@
-.. |myquota| raw:: html
-
-   <br>
-   Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Used
-   <br>
-   --------------------------------------------------------------------
-   <br>
-   testproject &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 64512 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 64444 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.11%
-   <br>
-   <br>
-   Filesystem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quota &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Used
-   <br>
-   --------------------------------------------------------------------
-   <br>
-   /home/testuser &nbsp;&nbsp;&nbsp;&nbsp; 100 GB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 96 GB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.48%
-   <br>
-   /work/testproject &nbsp; 25 TB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25 TB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00%
-
-
-
 Resources
 ==================
 All users and projects have associated quotas on resources, such as disk space and CPU time. Everyone can use the ``myquota`` command to get a simple overview of the resources they have available.
 
 .. code-block:: console
 
-   [testuser@frontend ~]$ myquota
+	[testuser@frontend ~]$ myquota
 
 .. tip::
 
- |myquota|
+	Account                     Quota               Available           Used
+	\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+	testproject                 64512               62842               2.59%
+
+
+	Filesystem                  Quota               Available           Used
+	\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+	/home/testuser              100 GiB             93 GiB              6.57%
+	/work/testproject           25 TiB              24 TiB              0.00%
 
 
 For each associated project, this command shows the number of core-hours available for computation, and the amount of disk space used in the project's work folder.

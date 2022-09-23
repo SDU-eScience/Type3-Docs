@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 :root {
   --main-color: #006AFF;
-  --hover-color: #006AFF; 
+  --hover-color: #006AFF;
   --main-size: 18px;
   --small-size: 14px;
 }
@@ -53,7 +53,7 @@ body {
   position: relative;
   padding: 20px 0px 20px 0px;
   margin-left: auto;
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   height: auto;
   margin-right: auto;
@@ -80,7 +80,7 @@ a.headerlink {
 }
 
 a {
-  color: #006AFF;  
+  color: #006AFF;
 }
 
 h1:hover > a.headerlink,
@@ -204,8 +204,8 @@ code, pre {
 
 pre {
   color: #F5F7F9;
-  background-color: #183055; 
-  border-color: #f7f7f7; 
+  background-color: #183055;
+  border-color: #f7f7f7;
   overflow: auto;
   border: 3px solid #eee;
   padding: 22px 0 22px 22px;
@@ -396,7 +396,7 @@ div.sphinxsidebar p {
   padding: 0;
   font-family: 'IBM Plex Sans', sans-serif!important;
   font-size: var(--main-size);
-  color: var(--main-color); 
+  color: var(--main-color);
 }
 
 div.sphinxsidebar a:hover {
@@ -431,13 +431,13 @@ div.sphinxsidebar .sidebar-toc a {
 }
 
 .sidebar-toc ul li a:hover {
-  color: var(--hover-color); 
+  color: var(--hover-color);
 }
 
 .sidebar-toc > ul li.current {
   list-style-type: disc;
   margin-left: 25px;
-  color: var(--main-color); 
+  color: var(--main-color);
   font-size: 16px;
 }
 
@@ -811,8 +811,8 @@ td:first-child {
 }
 
 /* remove h4 headers from right toc */
-#comments ul > li > ul > li > ul > li > ul > li { 
-    display: none; 
+#comments ul > li > ul > li > ul > li > ul > li {
+    display: none;
 }
 
 #comments a:hover {
@@ -1201,19 +1201,26 @@ div.topic.contents > ul > li {
   margin: -20px 0 20px;
   overflow: auto;
   border: 3px solid #eee;
-  padding: 22px 0 22px 22px;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-right: 0;
   background-color: #f3f8f9;
   border-radius: 0px;
   border-top: 0px;
   font-size: 16px;
-  font-family: Consolas, monospace;
+  font-family: "Consolas", monospace;
+  white-space: pre;
 }
 
 .admonition.tip .admonition-title {
   color: #2ECC71;
   display: none;
 }
+
+.admonition.tip dd {
+  margin-bottom: -40px;
+}
+
 
 .admonition.note {
   background-color: #f3f8f9;
@@ -1984,8 +1991,8 @@ footer.page-footer .footer-copyright {
 .section::before {
   content: "";
   display: block;
-  height: 50px; 
-  margin: -70px 0 0; 
+  height: 50px;
+  margin: -70px 0 0;
 }
 
 .navbar {
@@ -2247,4 +2254,9 @@ tr > td {
 
 td:last-child {
     padding-right: 0;
+}
+
+hr.dash {
+    border: 1px dashed black;
+    width: 95%;
 }
