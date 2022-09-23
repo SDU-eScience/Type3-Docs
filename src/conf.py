@@ -46,7 +46,7 @@ project = 'Type 3 - Large Memory HPC '
 copyright = """Copyright 2020-2021, SDU eScience Center"""
 author = 'SDU eScience Team'
 
-language = None
+language = 'en' 
 
 # Else, today_fmt is used as the format for a strftime call.
 today_fmt = '%Y-%m-%d'

@@ -25,14 +25,22 @@ Most software packages available on the system can be found as a module. To see 
 
 	|dash-line| The following is a list of the modules and extensions currently available: |dash-line|
 
-	Autoconf: Autoconf/2.69-GCCcore-10.2.0
-	  Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages. These scripts can adapt the packages to many kinds of
-	  UNIX-like systems without manual user intervention. Autoconf creates a configuration script for a package from a template file that lists the operating system features that the package can
-	  use, in the form of M4 macro calls.
-	Automake: Automake/1.16.2-GCCcore-10.2.0
-	  Automake: GNU Standards-compliant Makefile generator
-	Autotools: Autotools/20200321-GCCcore-10.2.0
-	  This bundle collect the standard GNU build tools: Autoconf, Automake and libtool
+	ATK: ATK/2.38.0
+	  ATK provides the set of accessibility interfaces that are implemented by other toolkits and 
+	  applications. Using the ATK interfaces, accessibility tools have full access to view and control 
+	  running applications.
+
+	Anaconda3: Anaconda3/2022.05
+	  Built to complement the rich, open source Python community, the Anaconda platform provides 
+	  an enterprise-ready data analytics platform that empowers companies to adopt a modern open data 
+	  science analytics architecture.
+
+	Autoconf: Autoconf/2.71
+	  Autoconf is an extensible package of M4 macros that produce shell scripts to automatically 
+	  configure software source code packages. These scripts can adapt the packages to many kinds of 
+	  UNIX-like systems without manual user intervention. Autoconf creates a configuration script for 
+	  a package from a template file that lists the operating system features that the package can use, 
+	  in the form of M4 macro calls.
 
 	|dash-line|
 
