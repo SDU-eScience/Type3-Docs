@@ -4,19 +4,23 @@
 		.docstable tr.row-even th,
 		.docstable tr.row-even td{
 		  font-size: 0.87em;
+		  text-align: left;
 		}
 		.docstable tr.row-odd th,
 		.docstable tr.row-odd td {
 		  font-size: 0.87em;
+		  text-align: left;
 		}
 		@media screen and (max-width: 768px) {
 			.docstable tr.row-even th,
 			.docstable tr.row-even td{
-		 		 font-size: 0.78em;
+		 		font-size: 0.78em;
+		 		text-align: left;
 			}
 			.docstable tr.row-odd th,
 			.docstable tr.row-odd td {
 		  		font-size: 0.78em;
+		  		text-align: left;
 			}
 		}
 	</style>
