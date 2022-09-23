@@ -72,6 +72,19 @@ After your account has been created on the system, you are ready to log in using
 
 To copy files to and from the system you can use direct ``scp`` or ``sftp`` to the frontend node. These operations will also require the use of your SSH key.
 
+To ensure that you are connecting to the right host, please verify that the fingerprint of the host key matches the information in the table below.
+
+.. rst-class:: docstable
+
++--------------+---------------------------------------------+-------------------------------------------------+
+| **Key Type** | **Fingerprint (MD5)**                       | **Fingerprint (SHA256)**                        |
++==============+=============================================+=================================================+
+| RSA          | 7Rp4TuAR/KneWimLyOfX5TGPLzzVwypgv5ObXvNmIzk | 88:a0:b0:56:b8:51:2d:d2:de:1c:1a:27:ab:1b:55:ff |
++--------------+---------------------------------------------+-------------------------------------------------+
+| ED25519      | Ak6S45s+nOAmLN/gYK5UvWTEjMxKJNghKGh+1qyPpps | 1f:8e:d9:1d:f8:e9:ac:5d:4d:f4:64:dc:4a:cc:8c:83 |
++--------------+---------------------------------------------+-------------------------------------------------+
+| ECDSA        | 04YpezHMIzNyOz8TV9v0ndrkHQ+Ec2gu8acyWr8yuyc | 1c:a7:d4:a8:74:11:58:0b:4b:be:78:65:04:df:e2:25 |
++--------------+---------------------------------------------+-------------------------------------------------+
 
 SSH configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
