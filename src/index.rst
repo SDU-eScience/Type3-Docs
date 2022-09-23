@@ -45,3 +45,4 @@ On this page you will find information about how to apply for resources and basi
    :hidden:
 
    help/troubleshooting
+   help/updates
