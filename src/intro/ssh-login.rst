@@ -1,3 +1,27 @@
+.. raw:: html
+
+	<style>
+		.docstable tr.row-even th,
+		.docstable tr.row-even td{
+		  font-size: 0.87em;
+		}
+		.docstable tr.row-odd th,
+		.docstable tr.row-odd td {
+		  font-size: 0.87em;
+		}
+		@media screen and (max-width: 768px) {
+			.docstable tr.row-even th,
+			.docstable tr.row-even td{
+		 		 font-size: 0.78em;
+			}
+			.docstable tr.row-odd th,
+			.docstable tr.row-odd td {
+		  		font-size: 0.78em;
+			}
+		}
+	</style>
+
+
 SSH Login
 ==================
 Secure Shell (SSH) is a way to log in to remote computers securely as all data is encrypted in both directions between the local computer and the remote computer.
@@ -77,7 +101,7 @@ To ensure that you are connecting to the right host, please verify that the fing
 .. rst-class:: docstable
 
 +--------------+---------------------------------------------+-------------------------------------------------+
-| **Key Type** | **Fingerprint (MD5)**                       | **Fingerprint (SHA256)**                        |
+| **Key Type** | **Fingerprint (SHA256)**                    | **Fingerprint (MD5)**                           |
 +==============+=============================================+=================================================+
 | RSA          | 7Rp4TuAR/KneWimLyOfX5TGPLzzVwypgv5ObXvNmIzk | 88:a0:b0:56:b8:51:2d:d2:de:1c:1a:27:ab:1b:55:ff |
 +--------------+---------------------------------------------+-------------------------------------------------+
