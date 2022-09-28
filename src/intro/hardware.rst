@@ -20,8 +20,13 @@ The system consists of 14 compute nodes, a frontend node for accessing the syste
 * 480 GB SSD
 * 7.68 TB NVMe (only two nodes)
 
+1x Dell PowerEdge R6525
 
-10x Dell PowerEdge R6525
+* 2048 GB DDR4-2933
+* 2x AMD EPYC 7713 64-Core @ 2.0Ghz
+* 480 GB SSD
+
+9x Dell PowerEdge R6525
 
 * 1024 GB DDR4-2933
 * 2x AMD EPYC 7713 64-Core @ 2.0Ghz
