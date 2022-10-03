@@ -42,11 +42,15 @@ The list below describes some of the most commen directives used in a job script
 * Use ``--time`` to set the wall time. Setting the maximum wall time as low as possible will allow Slurm to schedule your job on idle nodes currently waiting for a larger job to start.
 * Use ``--nodes`` to set the number of required nodes. If your job can be flexible, use a range of the number of nodes needed to run the job, such as ``--nodes=2-4``. In this case your job starts running when at least 2 nodes are available. If at that time 3 or 4 nodes are available, then your job gets all of them.
 * Use ``--ntasks-per-node`` to define the number of necessary MPI processes, for example 128 if you want a single process per core.
-* Use ``--mem-per-cpu`` to define how much memory is needed per allocated core (default is 8 GB per core). Please do not request more than what is needed for the job to run.
+* Use ``--mem-per-cpu`` to define how much memory is needed per allocated CPU core (default is 8 GB per core). Please do not request more than what is needed for the job to run.
 * Use ``--account`` to define the resource billing account. When left unspecified your default account is used. For this reason, this option is only relevant if you are part of multiple projects.
 * Use ``--exclusive`` to request exclusive access to the entire node. This will ensure that no other job is running on the node at the same time as your job. With this option you will be billed for the entire node, even if you are only using a subset of the cores.
 * Use ``--requeue`` to automatically requeue the job if it either fails or is being preempted by a higher priority job.
 * Use ``--job-name`` to set a custom name for your job. This is the name that will be visible in the queue.
+
+.. note::
+
+	By default all jobs will be allocated 8 GB of memory for each allocated CPU core, regardless of how much memory the compute node has. If you need more memory it is important that you use the ``--mem-per-cpu`` directive in your job script.
 
 
 Scavenger jobs
@@ -69,6 +73,18 @@ Two of the nodes have a large NVMe for local scratch space. To request these nod
 	#SBATCH --constraint=scratch
 
 The scratch space is available under ``/scratch``. All data in this directory will be deleted when the job terminates.
+
+
+4 TB nodes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To explicitly request a node with 4 TB of memory, use the following directives. Due to a limitation in Slurm, even when selecting these nodes, by default you will only be assigned 8 GB of memory per core. For this reason you also need to add the ``--mem-per-cpu`` directive.
+
+.. code-block:: bash
+
+	#SBATCH --constraint=hm1
+	#SBATCH --mem-per-cpu=32000
+
+Unless you have a good reason for requesting a specific node type, you should only use the ``--mem-per-cpu`` directive to request the needed resources. Slurm will automatically select a node where the requested resources are available, regardless of node types.
 
 
 MPI jobs
