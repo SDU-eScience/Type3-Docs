@@ -66,7 +66,7 @@ If you want to automatically reschedule your scavenger jobs upon preemption, use
 
 Local scratch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Two of the nodes have a large NVMe for local scratch space. To request these nodes add the following directive to your job script.
+All nodes have around 360 GB of local scratch space in the ``/tmp`` directory. However, two of the nodes also have a large NVMe for additional local scratch space. To request these nodes add the following directive to your job script.
 
 .. code-block:: bash
 
