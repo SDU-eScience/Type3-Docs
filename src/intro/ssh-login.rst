@@ -162,7 +162,7 @@ To create a new key you should leave the default parameters at RSA and a key len
 
 Add a key comment (such as *My PC*) and write a strong passphrase to protect the key. Finally, save the two parts of the key. For both parts of the key pair we suggest saving them in a folder you can easily find again, such as your *Documents* folder.
 
-* *Public key*: This is the public part of the key which you must attach when applying for an account on the system. The easiest way to get the public key in a suitable format is to copy the content of the frame titled *Public key for pasting into OpenSSH authorized_keys file*. Highlight and copy everything in the frame to the clipboard. Next, open notepad and paste the contents. Everything must be in one (very long) line. Save the contents in a file with the extension .txt for easy access later, such as *id_rsa_pub.txt*. Be aware that clicking *Save public key* will not save the public key in a format suitable for accesing our system.
+* *Public key*: This is the public part of the key which you must attach when applying for an account on the system. The easiest way to get the public key in a suitable format is to copy the content of the frame titled *Public key for pasting into OpenSSH authorized_keys file*. Highlight and copy everything in the frame to the clipboard. Next, open notepad and paste the content. Everything must be in one (very long) line. Save the content in a file with the extension .txt for easy access later, such as *id_rsa_pub.txt*. Be aware that clicking *Save public key* will not save the public key in a format suitable for accessing our system.
 * *Private key*: This is the private part of the key which stays on your own computer. Click *Save private key* to save the private key in "PuTTY format". For easy access later, save this in a file with the extension .ppk, such as *id_rsa.ppk*.
 
 Note that you can use the same key pair to access multiple remote system if needed.
@@ -222,7 +222,7 @@ After your account on the system has been created, you will be able to access th
 
 In order to log in from a different computer, you need to copy the public SSH key stored on that computer to your user account on the cluster.
 
-First, log in to the the cluster:
+First, log in to the cluster:
 
 .. code-block:: console
 
@@ -231,7 +231,7 @@ First, log in to the the cluster:
 
 The file ``~/.ssh/authorized_keys`` should already exist in your home folder. Any key added to this file (one key per line) will be accepted when accessing the system. Use your favorite editor, such as ``vim``, ``nano``, or ``mcedit``, to modify the file.
 
-After editing the file, the content should look smilar to this:
+After editing the file, the content should look similar to this:
 
 .. code-block:: console
 
