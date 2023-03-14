@@ -29,7 +29,7 @@ When appending the ``-l`` option to the command, it will show (in percentage) ho
 
 Default project
 ------------------
-If you are part of multiple projects you can use the interactive command ``set_default_project`` to select the default project used when when submitting Slurm jobs.
+If you are part of multiple projects you can use the interactive command ``set_default_project`` to select the default project used when submitting Slurm jobs.
 
 .. code-block:: console
 
