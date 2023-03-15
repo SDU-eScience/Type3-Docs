@@ -16,6 +16,7 @@ On this page you will find information about how to apply for resources and basi
    intro/hardware.rst
    intro/ssh-login.rst
    intro/quota.rst
+   intro/ucloud.rst
 
 .. toctree::
    :maxdepth: 1
