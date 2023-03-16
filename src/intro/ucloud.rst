@@ -16,13 +16,13 @@ The SDU eScience `terms of service`_ must be approved upon first access. Afterwa
 
 Once logged in, the user has the option to set up `two factor authentication`_ by clicking on the avatar icon in the upper right corner of the home screen.
 
-UCloud username
+UCloud ID
 _______________
 
 .. image:: ../_static/username.png
    :width: 90%
 
-A unique UCloud username is generated for you the first time you login using WAYF. This username can be seen in the bottom left corner of the UCloud interface.
+A unique UCloud ID is generated for you the first time you login using WAYF. This ID can be seen in the bottom left corner of the UCloud interface.
 
 
 Projects
@@ -38,7 +38,7 @@ __________________________
 - From the dropdown menu, select *Manage projects*. This will open the `My Projects`_ page.
 - Under *My Projects* click on the title of your project. This will open the project dashboard.
 - Click on *Members*.
-- Type in the username and click *Add*. The user has now been invited, but they still need to accept the invitation before they are part of the project.
+- Type in the ID and click *Add*. The user has now been invited, but they still need to accept the invitation before they are part of the project.
 
 Accepting an invitation
 _______________________
@@ -46,7 +46,7 @@ _______________________
 .. image:: ../_static/notification.png
    :width: 90%
 
-When you are invited you a project you will receive a notification. Navigate to the top right corner of the UCloud interface and click the bell button to access your notifications.
+When you are invited to a project you will receive a notification. Navigate to the top right corner of the UCloud interface and click the bell button to access your notifications.
 
 .. image:: ../_static/accept.png
    :width: 90%
@@ -80,7 +80,7 @@ Give your key a title, paste the key into the `Public key` field and click `Add 
 SSH username
 ____________
 
-Your SSH username will be different from your UCloud username. For the time being, the only way to see your SSH username is to start a job.
+Your SSH username will be different from your UCloud ID. For the time being, the only way to see your SSH username is to start a job.
 
 Users with existing SSH access can see the usernames of all users in their projects using the following command:
 
