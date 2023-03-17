@@ -10,7 +10,7 @@ UCloud can be accessed via the URL: `cloud.sdu.dk`_.
    :width: 90%
 
 
-To access the platform you need to click on the *WAYF* (*Where Are You From*) button. This allows any user affiliated with a Danish educational institution to access the platform without a separate account. All they need is the username and password that they use in their institution.
+To access the platform you need to click on the *WAYF* (*Where Are You From*) button. This allows any user affiliated with a Danish educational institution to access the platform without a separate account. All they need is the username and password from their own institution.
 
 The SDU eScience `terms of service`_ must be approved upon first access. Afterwards, the user is redirected to the `UCloud user interface`_.
 
