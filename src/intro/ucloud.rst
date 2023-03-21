@@ -1,5 +1,13 @@
 UCloud Integration
 ==================
+The Hippo HPC cluster is connected to the web-based UCloud platform, which allows you to manage most aspects of the system directly from your browser.
+
+- Submit and monitor Slurm jobs.
+- Upload, download, and manage your files.
+- Project management (adding and removing users, applying for additional resources, track resource usage).
+- Upload SSH keys to the system.
+
+The following sections will give a quick introduction to the UCloud platform.
 
 Login
 -----
