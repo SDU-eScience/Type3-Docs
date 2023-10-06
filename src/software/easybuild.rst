@@ -28,7 +28,7 @@ To search for all available easyconfig files, use the option ``--search`` (or ``
 
 .. code-block:: console
 
-	[testuser@frontend ~]$  eb -S '^Python-3.6.6'
+	[testuser@frontend ~]$ eb -S '^Python-3.6.6'
 
 .. tip::
 	CFGS1=/opt/sys/easybuild-easyconfigs/easybuild/easyconfigs/p/Python

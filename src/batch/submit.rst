@@ -75,16 +75,30 @@ All nodes have around 360 GB of local scratch space in the ``/tmp`` directory. H
 The scratch space is available under ``/scratch``. All data in this directory will be deleted when the job terminates.
 
 
-4 TB nodes
+Node types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To explicitly request a node with 4 TB of memory, use the following directives. Due to a limitation in Slurm, even when selecting these nodes, by default you will only be assigned 8 GB of memory per core. For this reason you also need to add the ``--mem-per-cpu`` directive.
+Currently the system has three different `types of nodes <../intro/hardware.html>`__, but they are all part of the same Slurm partition. To explicitly request a specific node type, you can use the ``--constraint`` directive, for example:
 
 .. code-block:: bash
 
 	#SBATCH --constraint=hm1
 	#SBATCH --mem-per-cpu=32000
 
-Unless you have a good reason for requesting a specific node type, you should only use the ``--mem-per-cpu`` directive to request the needed resources. Slurm will automatically select a node where the requested resources are available, regardless of node types.
+The table below shows the different nodes types, and the maximum amount of memory that can be requested per core (assuming all 128 cores are being used).
+
+.. rst-class:: docstable
+
+	+-------------------------+----------------------------------+
+	| Value of ``constraint`` | Maximum value of ``mem-per-cpu`` |
+	+=========================+==================================+
+	| ``hm1``                 | ``32000``                        |
+	+-------------------------+----------------------------------+
+	| ``hm2``                 | ``8000``                         |
+	+-------------------------+----------------------------------+
+	| ``hm3``                 | ``12000``                        |
+	+-------------------------+----------------------------------+
+
+Unless you have a reason for requesting a specific node type, you should only use the ``--mem-per-cpu`` directive to request the needed resources. Slurm will automatically select a node where the requested resources are available, regardless of node types.
 
 
 MPI jobs

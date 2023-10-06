@@ -2,6 +2,17 @@ System Updates
 ===============
 On this page you can find a list of changes to the system, which might affect how users interact with the system.
 
+
+October 2023
+--------------
+All machines have been updated to AlmaLinux 8.8 and the system has been expanded with 20 additional nodes. If you experience any issues, please contact our service desk.
+
+Notable changes include:
+
+* The compute nodes are now connected to two different Infiniband switches. The ``hm1`` and ``hm2`` nodes are connected to the first switch, while the ``hm3`` nodes are connected to the second one. Because the connection between the two switches is oversubscribed, if your compute job requires high network throughput, you should restrict which nodes are being used.
+* We have had some issues with people running CPU intensive programs on the frontend, which is slowing down the frontend for everybody. For this reason CPU and memory resources are now constrained on the frontend, such that no single user can use all available resources.
+
+
 September 2022
 --------------
 All machines have been reinstalled with AlmaLinux 8.6 and the system has been expanded with 10 additional nodes. Because of the new Linux distribution, the entire module system has also been rebuilt. If you are missing any modules, contact our service desk and we will get them installed again.
