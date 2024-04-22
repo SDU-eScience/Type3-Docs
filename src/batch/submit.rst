@@ -133,7 +133,7 @@ You can submit a job script with the ``sbatch`` command like this:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ sbatch jobscript.sh
+	[user@frontend ~]$ sbatch jobscript.sh
 
 To add additional options, or to override options specified in the job script, add the new values to sbatch command when submitting the job script.
 
@@ -141,10 +141,10 @@ In the following example, the ``--time`` option is passed to ``sbatch`` command 
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ sbatch --time 4:00:00 jobscript.sh
+	[user@frontend ~]$ sbatch --time 4:00:00 jobscript.sh
 
 For more information about ``sbatch`` and to see a full list of the available options, consult the manual.
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ man sbatch
+	[user@frontend ~]$ man sbatch

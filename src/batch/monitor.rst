@@ -2,40 +2,44 @@ Monitor Jobs
 ============
 You can monitor your jobs with the ``squeue`` and ``scontrol`` commands.
 
+.. note::
+
+	The various Slurm commands implement ``--me`` as short hand notation for ``-u <myusername>`` to simplify the management of your own jobs.
+
 Listing jobs
 -------------------------
-You can list all jobs for ``testuser`` like this:
+You can list all jobs for ``<user>`` like this:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ squeue -u testuser
+	[user@frontend ~]$ squeue -u <user>
 
 The ``-t`` option will allow you to filter which jobs are listed by their job state code. Examples of states are ``RUNNING`` and ``PENDING`` and they can be used like this:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ squeue -u testuser -t RUNNING
-	[testuser@frontend ~]$ squeue -u testuser -t PENDING
+	[user@frontend ~]$ squeue -u <user> -t RUNNING
+	[user@frontend ~]$ squeue -u <user> -t PENDING
 
 For a full list of possible job states, please consult the manual:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ man squeue
+	[user@frontend ~]$ man squeue
 
 List detailed job information
 --------------------------------------------
-The ``scontrol`` command can be used to show detailed job information.
+The ``scontrol`` command can be used to show detailed job information for a given ``<jobid>``.
 
 .. code-block:: console
 
-	   [testuser@frontend ~]$ scontrol show jobid -dd jobid
+	   [user@frontend ~]$ scontrol show job <jobid>
 
-This information could be valuable when troubleshooting. For additional information, please consult the manual:
+This information can be useful when troubleshooting. For additional information, please consult the manual:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ man scontrol
+	[user@frontend ~]$ man scontrol
 
 Below there is an example from the manual of a detailed job description as returned by ``scontrol``.
 

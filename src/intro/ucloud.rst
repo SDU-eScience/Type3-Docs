@@ -94,7 +94,7 @@ Users with existing SSH access can see the usernames of all users in their proje
 
 .. code-block:: console
 
-	[sshuser@hippo-fe ~]$ myquota -l
+	[user@frontend ~]$ myquota -l
 
 
 .. _My Projects: https://cloud.sdu.dk/app/projects

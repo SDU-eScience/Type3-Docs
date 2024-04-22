@@ -4,19 +4,19 @@ All users and projects have associated quotas on resources, such as disk space a
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ myquota
+	[user@frontend ~]$ myquota
 
 .. tip::
 
 	Account                     Quota               Available           Used
 	\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-	testproject                 64512               62842               2.59%
+	project                     64512               62842               2.59%
 
 
 	Filesystem                  Quota               Available           Used
 	\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-	/home/testuser              100 GiB             93 GiB              6.57%
-	/work/testproject           25 TiB              24 TiB              0.00%
+	/home/user                  100 GiB             93 GiB              6.57%
+	/work/project               25 TiB              24 TiB              0.00%
 
 
 For each associated project, this command shows the number of core-hours available for computation, and the amount of disk space used in the project's work folder.
@@ -33,7 +33,7 @@ If you are part of multiple projects you can use the interactive command ``set_d
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ set_default_project
+	[user@frontend ~]$ set_default_project
 
 .. tip::
 	You are part of the following projects:

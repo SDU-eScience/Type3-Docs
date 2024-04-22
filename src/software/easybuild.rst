@@ -11,7 +11,7 @@ The EasyBuild module is loaded by default when the user accesses the frontend no
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ module list
+	[user@frontend ~]$ module list
 
 .. tip::
 
@@ -28,7 +28,7 @@ To search for all available easyconfig files, use the option ``--search`` (or ``
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ eb -S '^Python-3.6.6'
+	[user@frontend ~]$ eb -S '^Python-3.6.6'
 
 .. tip::
 	CFGS1=/opt/sys/easybuild-easyconfigs/easybuild/easyconfigs/p/Python
@@ -45,11 +45,11 @@ Installing new software
 -----------------------
 
 The ``eb`` command is used to install new software from the corresponding easyconfig file.
-To check the software dependencies, run the ``eb`` command with the option ``--dry-run`` (or ``-D``). For example:
+To check the software dependencies, run the ``eb`` command with the option ``--dry-run`` (or ``-D``). For example:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -D
+	[user@frontend ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -D
 
 .. tip::
 
@@ -72,25 +72,25 @@ To check the software dependencies, run the ``eb`` command with the option ``
 	== Temporary log file(s) /tmp/eb-9rE3Ix/easybuild-yWJqtE.log* have been removed.
 	== Temporary directory /tmp/eb-9rE3Ix has been removed.
 
-All the dependencies marked with ``[x]`` are already installed on the system and can be loaded with the corresponding module.
+All the dependencies marked with ``[x]`` are already installed on the system and can be loaded with the corresponding module.
 
-The software and the missing dependencies can be installed using the option ``--robot`` (or ``-r``):
+The software and the missing dependencies can be installed using the option ``--robot`` (or ``-r``):
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -r
+	[user@frontend ~]$ eb Python-3.8.6-GCCcore-10.2.0.eb -r
 
-The additional option ``--debug`` (or ``-d``) can be used to enable debug log mode. More options are reported `here <https://docs.easybuild.io/en/latest/version-specific/help.html>`__.
+The additional option ``--debug`` (or ``-d``) can be used to enable debug log mode. More options are reported `here <https://docs.easybuild.io/en/latest/version-specific/help.html>`__.
 
-By default EasyBuild will install the software in ``$HOME/easybuild/software`` and the corresponding module file in ``$HOME/easybuild/modules/all``. The path of the module file is automatically added to ``$MODULEPATH``, once the EasyBuild module is loaded.
+By default EasyBuild will install the software in ``$HOME/easybuild/software`` and the corresponding module file in ``$HOME/easybuild/modules/all``. The path of the module file is automatically added to ``$MODULEPATH``, once the EasyBuild module is loaded.
 
-The user can also specify a different installation path for a particular software and the corresponding module using the option ``--installpath`` (or, more specifically,  ``--installpath-software`` and ``--installpath-modules``). In this case the new module path must be added with the command:  ``module use <new_module_path>``.
+The user can also specify a different installation path for a particular software and the corresponding module using the option ``--installpath`` (or, more specifically,  ``--installpath-software`` and ``--installpath-modules``). In this case the new module path must be added with the command:  ``module use <new_module_path>``.
 
 An overview of the default EasyBuild configuration settings can be displayed with the command:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ eb --show-config
+	[user@frontend ~]$ eb --show-config
 
 .. tip::
 
@@ -98,14 +98,14 @@ An overview of the default EasyBuild configuration settings can be displayed wit
 	# Current EasyBuild configuration
 	# (C: command line argument, D: default value, E: environment variable, F: configuration file)
 	#
-	buildpath      (E) = /home/testuser/easybuild/build
-	containerpath  (E) = /home/testuser/easybuild/containers
-	installpath    (E) = /home/testuser/easybuild
-	packagepath    (E) = /home/testuser/easybuild/packages
-	prefix         (E) = /home/testuser/easybuild
-	repositorypath (E) = /home/testuser/easybuild/ebfiles_repo
+	buildpath      (E) = /home/user/easybuild/build
+	containerpath  (E) = /home/user/easybuild/containers
+	installpath    (E) = /home/user/easybuild
+	packagepath    (E) = /home/user/easybuild/packages
+	prefix         (E) = /home/user/easybuild
+	repositorypath (E) = /home/user/easybuild/ebfiles_repo
 	robot-paths    (E) = /opt/sys/easybuild-easyconfigs/easybuild/easyconfigs
-	sourcepath     (E) = /home/testuser/easybuild/sources
+	sourcepath     (E) = /home/user/easybuild/sources
 
 
 Further reading

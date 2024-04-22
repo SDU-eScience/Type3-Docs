@@ -92,11 +92,11 @@ When requesting an account, you need to provide the public part of the key to ga
 
 Connecting to the system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-After your account has been created on the system, you are ready to log in using your SSH key. Open a terminal and use the ``ssh`` command as shown below, where you should replace ``testuser`` with your assigned username.
+After your account has been created on the system, you are ready to log in using your SSH key. Open a terminal and use the ``ssh`` command as shown below, where you should replace ``user`` with your assigned username.
 
 .. code-block:: console
 
-   user@laptop:~$ ssh testuser@hpc-type3.sdu.dk
+   user@laptop:~$ ssh user@hpc-type3.sdu.dk
 
 To copy files to and from the system you can use direct ``scp`` or ``sftp`` to the frontend node. These operations will also require the use of your SSH key.
 
@@ -125,7 +125,7 @@ You can use the file ``~/.ssh/config`` to setup parameters for SSH that you othe
 	#
 	Host type3
 	   Hostname hpc-type3.sdu.dk
-	   User testuser
+	   User <user>
 
 With the above file in place, you can now simply use the following command to access the system.
 
@@ -226,7 +226,7 @@ First, log in to the cluster:
 
 .. code-block:: console
 
-	user@laptop:~$ ssh testuser@hpc-type3.sdu.dk
+	user@laptop:~$ ssh user@hpc-type3.sdu.dk
 
 
 The file ``~/.ssh/authorized_keys`` should already exist in your home folder. Any key added to this file (one key per line) will be accepted when accessing the system. Use your favorite editor, such as ``vim``, ``nano``, or ``mcedit``, to modify the file.
@@ -235,7 +235,7 @@ After editing the file, the content should look similar to this:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ cat ~/.ssh/authorized_keys
+	[user@frontend ~]$ cat ~/.ssh/authorized_keys
 
 .. tip::
 

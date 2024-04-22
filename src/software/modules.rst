@@ -10,7 +10,7 @@ Modules System
 
 Multiple versions of the same software are accessible using the `Lmod <https://www.tacc.utexas.edu/research-development/tacc-projects/lmod>`__ environment module system.
 
-The module system makes it easy to specify which version you want to use and keeps everything consistent. There are also circumstances where one software program will have some environment setting or file that conflicts with a different program, and in many cases the module system can also help solve this problem.
+The module system makes it easy to specify which version you want to use and keeps everything consistent. There are also circumstances where one software program will have some environment setting or file that conflicts with a different program, and in many cases the module system can also help solve this problem.
 
 Access modules
 --------------
@@ -19,27 +19,27 @@ Most software packages available on the system can be found as a module. To see 
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ module spider
+	[user@frontend ~]$ module spider
 
 .. tip::
 
 	|dash-line| The following is a list of the modules and extensions currently available: |dash-line|
 
 	ATK: ATK/2.38.0
-	  ATK provides the set of accessibility interfaces that are implemented by other toolkits and 
-	  applications. Using the ATK interfaces, accessibility tools have full access to view and control 
+	  ATK provides the set of accessibility interfaces that are implemented by other toolkits and
+	  applications. Using the ATK interfaces, accessibility tools have full access to view and control
 	  running applications.
 
 	Anaconda3: Anaconda3/2022.05
-	  Built to complement the rich, open source Python community, the Anaconda platform provides 
-	  an enterprise-ready data analytics platform that empowers companies to adopt a modern open data 
+	  Built to complement the rich, open source Python community, the Anaconda platform provides
+	  an enterprise-ready data analytics platform that empowers companies to adopt a modern open data
 	  science analytics architecture.
 
 	Autoconf: Autoconf/2.71
-	  Autoconf is an extensible package of M4 macros that produce shell scripts to automatically 
-	  configure software source code packages. These scripts can adapt the packages to many kinds of 
-	  UNIX-like systems without manual user intervention. Autoconf creates a configuration script for 
-	  a package from a template file that lists the operating system features that the package can use, 
+	  Autoconf is an extensible package of M4 macros that produce shell scripts to automatically
+	  configure software source code packages. These scripts can adapt the packages to many kinds of
+	  UNIX-like systems without manual user intervention. Autoconf creates a configuration script for
+	  a package from a template file that lists the operating system features that the package can use,
 	  in the form of M4 macro calls.
 
 	|dash-line|
@@ -57,7 +57,7 @@ Most software packages available on the system can be found as a module. To see 
 
 	|dash-line|
 
-Note that the above list is not updated automatically. To get an updated list, rerun the command on the frontend node.
+Note that the above list is not updated automatically. To get an updated list, rerun the command on the frontend node.
 You can optionally specify a module name, and it will show you all available versions of module package, as shown in the example above.
 
 .. note::
@@ -67,13 +67,13 @@ You can optionally specify a module name, and it will show you all available ver
 Load a module
 -------------
 
-To load a module, use the command: ``module load <module_name>``. The default version will automatically be loaded.
+To load a module, use the command: ``module load <module_name>``. The default version will automatically be loaded.
 
 If you want a particular version, use instead: ``module load <module_name>/<module_version>``. For example:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ module list
+	[user@frontend ~]$ module list
 
 .. tip::
 
@@ -81,7 +81,7 @@ If you want a particular version, use instead: ``module load <module_name>/<modu
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ module load GCCcore/10.2.0
+	[user@frontend ~]$ module load GCCcore/10.2.0
 
 .. tip::
 
@@ -95,19 +95,19 @@ You can print the list of currently loaded modules with the command:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ module list
+	[user@frontend ~]$ module list
 
 
 Unload a module
 ---------------
 
-To unload a module, use the command: ``module unload <module_name>``. This command will automatically unload all the dependencies as well.
+To unload a module, use the command: ``module unload <module_name>``. This command will automatically unload all the dependencies as well.
 
 To unload everything, use:
 
 .. code-block:: console
 
-  [testuser@frontend ~]$ module purge
+  [user@frontend ~]$ module purge
 
 ..
 	Show hidden modules
@@ -117,16 +117,16 @@ To unload everything, use:
 
 	.. code-block:: console
 
-	[testuser@frontend ~]$ module --show-hidden avail
+	[user@frontend ~]$ module --show-hidden avail
 
 Examine a module file
 ---------------------
 
-If you want to see what the ``module`` command is doing to your environment, you can run ``module show <module_name>/<module_version>``. For example:
+If you want to see what the ``module`` command is doing to your environment, you can run ``module show <module_name>/<module_version>``. For example:
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ module show GCCcore/11.3.0
+	[user@frontend ~]$ module show GCCcore/11.3.0
 
 .. tip::
 

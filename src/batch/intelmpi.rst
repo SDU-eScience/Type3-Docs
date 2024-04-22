@@ -5,7 +5,7 @@ When you compile a program on the system, you can choose to use the Intel Compil
 
 .. code-block:: console
 
-	[testuser@frontend ~]$ module load intel/2022a
+	[user@frontend ~]$ module load intel/2022a
 
 
 When your program is compiled with Intel MPI you need to use the associated ``mpirun`` command to launch the program in your Slurm job script, instead of ``srun``. This is due to lack of proper PMIx support in Intel MPI, which is normally used by Slurm for launching MPI jobs. The following is an example of a job script that uses Intel MPI to launch a program.

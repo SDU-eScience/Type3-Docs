@@ -1,13 +1,13 @@
 System Description
 ==================
 
-The system consists of 34 compute nodes, a frontend node for accessing the system, and an IBM Elastic Storage system.
+The system consists of 36 compute nodes, a frontend node for accessing the system, and an IBM Elastic Storage system.
 
 **Summary**
 
-* Compute nodes: 34
-* CPU cores: 4352
-* Memory: 58 TiB
+* Compute nodes: 36
+* CPU cores: 4608
+* Memory: 60 TiB
 * Storage: 1 PiB
 * Interconnect: 100 Gbps InfiniBand EDR
 
@@ -26,7 +26,7 @@ The system consists of 34 compute nodes, a frontend node for accessing the syste
 * 2x AMD EPYC 7713 64-Core @ 2.0Ghz
 * 480 GB SSD
 
-20x Lenovo ThinkSystem SR645 V3 (called **hm3** in Slurm)
+22x Lenovo ThinkSystem SR645 V3 (called **hm3** in Slurm)
 
 * 1536 GB DDR5-4800
 * 2x AMD EPYC 9534 64-Core @ 2.45Ghz
