@@ -12,6 +12,6 @@ This will for example happen if you have been granted resources via a national D
 In this case the PI will be contacted directly via e-mail and on UCloud the PI will be invited to the project.
 After accepting this invitation, the PI role of the project will be transferred.
 
-.. _project application: https://cloud.sdu.dk/app/project/grants/new
+.. _project application: https://cloud.sdu.dk/app/grants/outgoing
 .. _UCloud: ucloud.html
 .. _invite: ucloud.html#inviting-users-to-projects
