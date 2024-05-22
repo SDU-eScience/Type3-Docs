@@ -97,6 +97,6 @@ Users with existing SSH access can see the usernames of all users in their proje
 .. _cloud.sdu.dk: https://cloud.sdu.dk
 .. _terms of service: https://legal.cloud.sdu.dk
 .. _UCloud user interface: https://docs.cloud.sdu.dk/guide/navigation-intro.html
-.. _two factor authentication: https://dev.cloud.sdu.dk/app/users/settings
+.. _two factor authentication: https://cloud.sdu.dk/app/users/settings
 .. _SSH Keys: https://cloud.sdu.dk/app/ssh-keys
 .. _page: https://cloud.sdu.dk/app/ssh-keys/create
